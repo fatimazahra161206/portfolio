@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaiqa — Fine Dining Restaurant</title>
+<meta name="description" content="Zaiqa Restaurant — authentic flavours, modern dining. Located in Rawalpindi.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0d0a;--bg2:#1a1710;--cream:#f5efe6;--amber:#d4822a;--amber2:#f0a855;--muted:#8a7d6b;--white:#fdfaf6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;background:rgba(15,13,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,130,42,0.15);}
+.nav-logo{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--amber2);font-style:italic;letter-spacing:1px;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:rgba(245,239,230,0.65);text-decoration:none;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:var(--amber2);}
+.nav-reserve{background:var(--amber);color:var(--bg);padding:0.6rem 1.6rem;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.3s;}
+.nav-reserve:hover{background:var(--amber2);}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:var(--bg);}
+.hero-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(212,130,42,0.08) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(240,168,85,0.06) 0%,transparent 50%);}
+.hero-line-v{position:absolute;top:0;left:50%;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(212,130,42,0.2),transparent);}
+.hero-content{position:relative;z-index:2;padding:0 2rem;animation:rise 1.2s ease forwards;}
+.hero-since{font-size:0.7rem;letter-spacing:6px;text-transform:uppercase;color:var(--amber);margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;}
+.hero-since::before,.hero-since::after{content:'';width:50px;height:1px;background:var(--amber);opacity:0.4;}
+.hero-name{font-family:'Fraunces',serif;font-size:clamp(5rem,14vw,11rem);color:var(--white);line-height:0.85;font-weight:300;letter-spacing:-2px;margin-bottom:0.5rem;}
+.hero-name em{color:var(--amber2);font-style:italic;}
+.hero-tagline{font-family:'Fraunces',serif;font-size:1.1rem;color:rgba(245,239,230,0.4);font-style:italic;letter-spacing:2px;margin-bottom:3rem;}
+.hero-btns{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
+.btn-amber{background:var(--amber);color:var(--bg);padding:1rem 2.5rem;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;transition:all 0.3s;display:inline-block;font-family:'Outfit',sans-serif;}
+.btn-amber:hover{background:var(--amber2);transform:translateY(-2px);}
+.btn-line{border:1px solid rgba(245,239,230,0.3);color:var(--cream);padding:1rem 2.5rem;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:400;text-decoration:none;transition:all 0.3s;display:inline-block;}
+.btn-line:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px);}
+
+/* STORY */
+.sec{padding:7rem 4rem;}
+.sec-lbl{font-size:0.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--amber);margin-bottom:0.8rem;}
+.sec-h{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;color:var(--white);margin-bottom:0.8rem;line-height:1.15;}
+.sec-h em{color:var(--amber2);font-style:italic;}
+.amber-line{width:40px;height:1px;background:var(--amber);margin-bottom:3rem;}
+
+#story{background:var(--bg2);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.story-p{color:var(--muted);line-height:1.95;font-weight:300;margin-bottom:1.2rem;font-size:1rem;}
+.story-nums{display:flex;gap:3rem;margin-top:2.5rem;flex-wrap:wrap;}
+.snum .n{font-family:'Fraunces',serif;font-size:2.8rem;color:var(--amber2);font-weight:300;line-height:1;}
+.snum .n span{font-size:1.5rem;}
+.snum .l{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;}
+.story-img{position:relative;height:480px;}
+.si-main{position:absolute;top:0;right:0;width:78%;height:82%;background:linear-gradient(160deg,#2a1f0f,#1a1408);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.si-main::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(212,130,42,0.12),transparent 70%);}
+.si-icon{font-size:6rem;opacity:0.15;}
+.si-accent{position:absolute;bottom:0;left:0;width:42%;height:44%;background:var(--amber);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.4rem;}
+.si-accent .n2{font-family:'Fraunces',serif;font-size:2.5rem;color:var(--bg);font-weight:300;line-height:1;}
+.si-accent .l2{font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(15,13,10,0.7);}
+
+/* MENU */
+#menu{background:var(--bg);}
+.menu-intro{max-width:600px;margin:0 auto 4rem;text-align:center;}
+.menu-intro .sec-lbl,.menu-intro .sec-h,.menu-intro .amber-line{display:block;text-align:center;}
+.menu-intro .amber-line{margin:0 auto 0;}
+.mtabs{display:flex;justify-content:center;gap:0;margin-bottom:3.5rem;border-bottom:1px solid rgba(212,130,42,0.15);}
+.mtab{padding:0.9rem 2.2rem;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:500;position:relative;transition:color 0.2s;}
+.mtab.active{color:var(--amber2);}
+.mtab.active::after{content:'';position:absolute;bottom:-1px;left:0;width:100%;height:1px;background:var(--amber2);}
+.mpanel{display:none;}
+.mpanel.active{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.mitem{padding:1.6rem 0;border-bottom:1px solid rgba(245,239,230,0.06);display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+.mitem:nth-child(odd){padding-right:3rem;}
+.mitem:nth-child(even){padding-left:3rem;border-left:1px solid rgba(245,239,230,0.06);}
+.mitem h4{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--white);font-weight:400;margin-bottom:0.35rem;}
+.mitem p{font-size:0.82rem;color:var(--muted);font-weight:300;line-height:1.5;}
+.mprice{color:var(--amber2);font-size:0.95rem;font-weight:500;white-space:nowrap;padding-top:0.2rem;font-family:'Fraunces',serif;}
+
+/* SPECIALS */
+#specials{background:var(--bg2);}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.spec-card{border:1px solid rgba(212,130,42,0.12);padding:2.2rem;transition:all 0.3s;position:relative;overflow:hidden;}
+.spec-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.spec-card:hover{border-color:rgba(212,130,42,0.35);}
+.spec-card:hover::after{transform:scaleX(1);}
+.spec-ic{font-size:1.8rem;margin-bottom:1rem;}
+.spec-card h3{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--white);font-weight:400;margin-bottom:0.6rem;}
+.spec-card p{color:var(--muted);font-size:0.88rem;line-height:1.7;font-weight:300;margin-bottom:1rem;}
+.spec-price{color:var(--amber2);font-size:0.85rem;font-weight:500;letter-spacing:1px;}
+
+/* REVIEWS */
+#reviews{background:var(--bg);text-align:center;}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3.5rem;}
+.rcard{background:var(--bg2);padding:2.2rem;text-align:left;border:1px solid rgba(212,130,42,0.08);transition:border-color 0.3s;}
+.rcard:hover{border-color:rgba(212,130,42,0.25);}
+.rstars{color:var(--amber2);margin-bottom:1rem;letter-spacing:3px;}
+.rtxt{font-family:'Fraunces',serif;font-size:1.05rem;color:rgba(245,239,230,0.75);line-height:1.75;font-style:italic;margin-bottom:1.5rem;}
+.rrev{display:flex;align-items:center;gap:1rem;}
+.rav{width:38px;height:38px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;color:var(--bg);font-size:0.85rem;font-weight:700;}
+.rname{color:var(--white);font-size:0.88rem;font-weight:500;}
+.rdate{color:var(--muted);font-size:0.72rem;}
+
+/* RESERVE */
+#reserve{background:var(--bg2);}
+.res-inner{max-width:680px;margin:0 auto;text-align:center;}
+.res-inner .sec-lbl,.res-inner .sec-h,.res-inner .amber-line{display:block;text-align:center;}
+.res-inner .amber-line{margin:0 auto 0;}
+.res-inner > p{color:var(--muted);line-height:1.8;margin:1.5rem 0 2.5rem;font-weight:300;}
+.rform{display:grid;grid-template-columns:1fr 1fr;gap:1rem;text-align:left;}
+.rform input,.rform select{padding:1rem 1.2rem;border:1px solid rgba(212,130,42,0.2);background:rgba(255,255,255,0.04);color:var(--cream);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;}
+.rform input::placeholder{color:rgba(245,239,230,0.25);}
+.rform select{color:rgba(245,239,230,0.6);}
+.rform select option{background:var(--bg2);color:var(--cream);}
+.rform input:focus,.rform select:focus{border-color:var(--amber);}
+.fw{grid-column:1/-1;}
+.rform button{grid-column:1/-1;background:var(--amber);color:var(--bg);padding:1.2rem;border:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all 0.3s;}
+.rform button:hover{background:var(--amber2);transform:translateY(-2px);}
+.rform button:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.rsuccess{display:none;margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(212,130,42,0.1);border:1px solid var(--amber);color:var(--amber2);font-weight:600;}
+
+/* CONTACT BUTTONS */
+#reach{background:var(--bg);text-align:center;}
+.reach-inner{max-width:600px;margin:0 auto;}
+.reach-inner p{color:var(--muted);line-height:1.8;margin:1rem 0 3rem;font-weight:300;}
+.reach-btns{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
+.wa-btn{background:#25D366;color:white;padding:1rem 2.5rem;font-size:0.85rem;letter-spacing:1px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:0.7rem;transition:all 0.3s;font-family:'Outfit',sans-serif;}
+.wa-btn:hover{background:#1ebe5c;transform:translateY(-2px);}
+.gm-btn{background:transparent;border:2px solid var(--amber);color:var(--amber);padding:1rem 2.5rem;font-size:0.85rem;letter-spacing:1px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:0.7rem;transition:all 0.3s;font-family:'Outfit',sans-serif;}
+.gm-btn:hover{background:var(--amber);color:var(--bg);transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:#080706;padding:3.5rem 4rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;border-top:1px solid rgba(212,130,42,0.1);}
+.f-logo{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--amber2);display:block;margin-bottom:1rem;font-style:italic;}
+.f-brand p{color:rgba(245,239,230,0.3);font-size:0.85rem;line-height:1.7;font-weight:300;}
+.f-col h4{font-family:'Fraunces',serif;color:var(--amber2);font-size:1rem;margin-bottom:1rem;font-style:italic;}
+.f-col p,.f-col a{color:rgba(245,239,230,0.35);font-size:0.85rem;line-height:2.1;display:block;text-decoration:none;font-weight:300;transition:color 0.2s;}
+.f-col a:hover{color:var(--amber2);}
+.f-bot{grid-column:1/-1;border-top:1px solid rgba(212,130,42,0.08);padding-top:1.5rem;text-align:center;color:rgba(245,239,230,0.18);font-size:0.75rem;}
+
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  .sec{padding:4rem 1.5rem;}
+  #story{grid-template-columns:1fr;gap:3rem;}
+  .mpanel.active{grid-template-columns:1fr;}
+  .mitem:nth-child(even){padding-left:0;border-left:none;}
+  .rform{grid-template-columns:1fr;}
+  .fw,.rform button{grid-column:1;}
+  footer{grid-template-columns:1fr;gap:2rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Zaiqa</div>
+  <ul class="nav-links">
+    <li><a href="#story">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#specials">Specials</a></li>
+    <li><a href="#reserve">Reserve</a></li>
+  </ul>
+  <button class="nav-reserve" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Book a Table</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-line-v"></div>
+  <div class="hero-content">
+    <div class="hero-since">Est. 2018 · Rawalpindi</div>
+    <h1 class="hero-name">Za<em>iqa</em></h1>
+    <p class="hero-tagline">Authentic Flavours. Modern Dining.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-amber">Explore Menu</a>
+      <a href="#reserve" class="btn-line">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<div id="story" class="sec">
+  <div>
+    <div class="sec-lbl">Our Story</div>
+    <h2 class="sec-h">Food Crafted with <em>Passion</em></h2>
+    <div class="amber-line"></div>
+    <p class="story-p">Zaiqa was born from a simple belief — that food should tell a story. Since 2018, we have been bringing together the rich heritage of Pakistani flavours with modern culinary technique, creating dishes that are both familiar and extraordinary.</p>
+    <p class="story-p">Every ingredient is sourced fresh, every recipe perfected, and every plate served with the warmth of a home kitchen. We believe dining is an experience, not just a meal.</p>
+    <a href="#reserve" class="btn-amber" style="margin-top:1.5rem;display:inline-block;">Reserve Your Table</a>
+    <div class="story-nums">
+      <div class="snum"><div class="n">7<span>+</span></div><div class="l">Years Serving</div></div>
+      <div class="snum"><div class="n">50<span>+</span></div><div class="l">Menu Items</div></div>
+      <div class="snum"><div class="n">5K<span>+</span></div><div class="l">Happy Guests</div></div>
+    </div>
+  </div>
+  <div class="story-img">
+    <div class="si-main"><div class="si-icon">🍽️</div></div>
+    <div class="si-accent"><div class="n2">4.9</div><div class="l2">Avg Rating</div></div>
+  </div>
+</div>
+
+<!-- MENU -->
+<div id="menu" class="sec">
+  <div class="menu-intro">
+    <div class="sec-lbl">Our Menu</div>
+    <h2 class="sec-h">Something for <em>Every</em> Taste</h2>
+    <div class="amber-line"></div>
+  </div>
+  <div class="mtabs">
+    <button class="mtab active" onclick="mTab(this,'m1')">Starters</button>
+    <button class="mtab" onclick="mTab(this,'m2')">Mains</button>
+    <button class="mtab" onclick="mTab(this,'m3')">BBQ</button>
+    <button class="mtab" onclick="mTab(this,'m4')">Desserts</button>
+    <button class="mtab" onclick="mTab(this,'m5')">Drinks</button>
+  </div>
+  <div id="m1" class="mpanel active">
+    <div class="mitem"><div><h4>Shami Kebab Platter</h4><p>Minced beef patties, green chutney, onion rings</p></div><div class="mprice">Rs. 550</div></div>
+    <div class="mitem"><div><h4>Paye ki Nihari Soup</h4><p>Slow-cooked bone broth, spiced, naan on side</p></div><div class="mprice">Rs. 480</div></div>
+    <div class="mitem"><div><h4>Dahi Bhalle</h4><p>Lentil dumplings, yogurt, tamarind, mint</p></div><div class="mprice">Rs. 350</div></div>
+    <div class="mitem"><div><h4>Chicken Corn Soup</h4><p>Thick cream corn, shredded chicken, soy vinegar</p></div><div class="mprice">Rs. 420</div></div>
+  </div>
+  <div id="m2" class="mpanel">
+    <div class="mitem"><div><h4>Karahi Gosht</h4><p>Tender mutton, tomatoes, ginger, fresh coriander</p></div><div class="mprice">Rs. 1,800</div></div>
+    <div class="mitem"><div><h4>Butter Chicken</h4><p>Creamy tomato gravy, aromatic spices, naan</p></div><div class="mprice">Rs. 1,200</div></div>
+    <div class="mitem"><div><h4>Daal Makhani</h4><p>Black lentils, butter, cream, slow cooked 12hr</p></div><div class="mprice">Rs. 750</div></div>
+    <div class="mitem"><div><h4>Biryani (Full)</h4><p>Dum-cooked basmati, spices, raita, salad</p></div><div class="mprice">Rs. 950</div></div>
+  </div>
+  <div id="m3" class="mpanel">
+    <div class="mitem"><div><h4>Seekh Kebab (6 pc)</h4><p>Spiced minced beef, charcoal grilled, chutney</p></div><div class="mprice">Rs. 980</div></div>
+    <div class="mitem"><div><h4>Chicken Tikka Half</h4><p>Marinated overnight, tandoor grilled, raita</p></div><div class="mprice">Rs. 1,100</div></div>
+    <div class="mitem"><div><h4>BBQ Platter (2 pax)</h4><p>Mix of seekh, tikka, boti, naan, salad</p></div><div class="mprice">Rs. 2,200</div></div>
+    <div class="mitem"><div><h4>Chapli Kebab</h4><p>Peshwari style, egg, pomegranate, chutney</p></div><div class="mprice">Rs. 850</div></div>
+  </div>
+  <div id="m4" class="mpanel">
+    <div class="mitem"><div><h4>Gulab Jamun</h4><p>Soft dumplings, rose sugar syrup, kesar</p></div><div class="mprice">Rs. 320</div></div>
+    <div class="mitem"><div><h4>Kheer</h4><p>Slow-cooked rice pudding, cardamom, pistachios</p></div><div class="mprice">Rs. 350</div></div>
+    <div class="mitem"><div><h4>Chocolate Lava Cake</h4><p>Dark chocolate, vanilla ice cream, berry coulis</p></div><div class="mprice">Rs. 650</div></div>
+    <div class="mitem"><div><h4>Mango Kulfi</h4><p>Dense traditional ice cream, pistachio, falooda</p></div><div class="mprice">Rs. 380</div></div>
+  </div>
+  <div id="m5" class="mpanel">
+    <div class="mitem"><div><h4>Rooh Afza Sharbat</h4><p>Classic rose syrup, chilled milk, basil seeds</p></div><div class="mprice">Rs. 280</div></div>
+    <div class="mitem"><div><h4>Kashmiri Chai</h4><p>Pink milk tea, cardamom, almonds, pistachios</p></div><div class="mprice">Rs. 320</div></div>
+    <div class="mitem"><div><h4>Fresh Mango Lassi</h4><p>Thick yogurt, alphonso mango, hint of cardamom</p></div><div class="mprice">Rs. 350</div></div>
+    <div class="mitem"><div><h4>Sugarcane Juice</h4><p>Fresh pressed, ginger, lemon, mint, crushed ice</p></div><div class="mprice">Rs. 250</div></div>
+  </div>
+</div>
+
+<!-- SPECIALS -->
+<div id="specials" class="sec">
+  <div class="sec-lbl">Chef's Selection</div>
+  <h2 class="sec-h">Daily <em>Specials</em></h2>
+  <div class="amber-line"></div>
+  <div class="spec-grid">
+    <div class="spec-card"><div class="spec-ic">🥘</div><h3>Friday Nihari</h3><p>Our legendary slow-cooked nihari available every Friday. Prepared from Thursday night, served fresh with naan and garnishes.</p><div class="spec-price">Rs. 1,400 (serves 2)</div></div>
+    <div class="spec-card"><div class="spec-ic">🔥</div><h3>Weekend BBQ Night</h3><p>Every Saturday & Sunday evening — live BBQ grill, full platters, family tables. Book in advance to secure your spot.</p><div class="spec-price">From Rs. 2,500 (family)</div></div>
+    <div class="spec-card"><div class="spec-ic">🍚</div><h3>Dum Biryani Sunday</h3><p>Authentic dum biryani cooked fresh every Sunday. Limited pots available — pre-order recommended.</p><div class="spec-price">Rs. 1,200 (full pot)</div></div>
+    <div class="spec-card"><div class="spec-ic">🎉</div><h3>Family Deal</h3><p>Any 2 mains + 2 starters + 4 drinks + dessert for 4 people. Available daily. Ask our team for the current deal.</p><div class="spec-price">Rs. 4,500 (4 pax)</div></div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div id="reviews" class="sec">
+  <div class="sec-lbl" style="text-align:center;">What Guests Say</div>
+  <h2 class="sec-h" style="text-align:center;margin-bottom:0;">Our <em>Reviews</em></h2>
+  <div class="rev-grid">
+    <div class="rcard"><div class="rstars">★★★★★</div><div class="rtxt">"The karahi gosht was absolutely incredible. Best I've had in Rawalpindi — tender, spicy, and perfectly cooked. We'll be back every week."</div><div class="rrev"><div class="rav">A</div><div><div class="rname">Ahmed Raza</div><div class="rdate">1 week ago</div></div></div></div>
+    <div class="rcard"><div class="rstars">★★★★★</div><div class="rtxt">"Brought my whole family for Eid dinner. The BBQ platter was massive and delicious. Staff was so warm and welcoming. Highly recommended!"</div><div class="rrev"><div class="rav">S</div><div><div class="rname">Sana Malik</div><div class="rdate">2 weeks ago</div></div></div></div>
+    <div class="rcard"><div class="rstars">★★★★★</div><div class="rtxt">"Friday Nihari is worth the wait — it's unlike anything else. The ambience is cozy, service is fast. Zaiqa never disappoints."</div><div class="rrev"><div class="rav">U</div><div><div class="rname">Usman Khan</div><div class="rdate">3 weeks ago</div></div></div></div>
+  </div>
+</div>
+
+<!-- RESERVE -->
+<div id="reserve" class="sec">
+  <div class="res-inner">
+    <div class="sec-lbl">Reservations</div>
+    <h2 class="sec-h">Book Your <em>Table</em></h2>
+    <div class="amber-line"></div>
+    <p>Reserve your table in advance for a guaranteed spot. Walk-ins welcome, but booking ensures the best experience.</p>
+    <!--
+      ACTIVATE EMAIL: Sign up free at formspree.io
+      Replace YOUR_FORM_ID with your actual Formspree form ID
+      Bookings will arrive directly in your Gmail!
+    -->
+    <form class="rform" id="resForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="New Table Reservation — Zaiqa Restaurant">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <input type="number" name="guests" placeholder="Number of Guests" min="1" max="30" class="fw">
+      <input type="text" name="requests" placeholder="Special Requests (optional)" class="fw">
+      <button type="submit" id="resBtn">Confirm Reservation</button>
+    </form>
+    <div class="rsuccess" id="resSuccess">✅ Reservation confirmed! We'll contact you to confirm your booking. See you soon!</div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="reach" class="sec">
+  <div class="reach-inner">
+    <div class="sec-lbl" style="text-align:center;">Get In Touch</div>
+    <h2 class="sec-h" style="text-align:center;">Contact <em>Us</em></h2>
+    <div class="amber-line" style="margin:0 auto 1rem;"></div>
+    <p>Have a question, want to place a catering order, or plan a private event? Reach out directly on WhatsApp or email us!</p>
+    <div class="reach-btns">
+      <a href="https://wa.me/923295787944?text=Hi%20Zaiqa%20Restaurant!%20I%20found%20your%20website%20and%20wanted%20to%20enquire%20about%20a%20reservation." target="_blank" class="wa-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
+        WhatsApp Us
+      </a>
+      <a href="mailto:fatimazahra.161206@gmail.com?subject=Enquiry%20—%20Zaiqa%20Restaurant" class="gm-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email Us
+      </a>
+    </div>
+    <p style="margin-top:2rem;font-size:0.85rem;color:var(--muted);">📍 Main Market, Satellite Town, Rawalpindi &nbsp;·&nbsp; ⏰ Daily 12pm – 11pm &nbsp;·&nbsp; 📞 +92 329 578 7944</p>
+  </div>
+</div>
+
+<footer>
+  <div class="f-brand"><span class="f-logo">Zaiqa</span><p>Authentic flavours, modern dining. A culinary experience in the heart of Rawalpindi.</p></div>
+  <div class="f-col"><h4>Visit Us</h4><p>📍 Main Market, Satellite Town, Rawalpindi</p><p>📞 +92 329 578 7944</p><p>📧 hello@zaiqa.pk</p><p>⏰ Daily: 12pm – 11pm</p></div>
+  <div class="f-col"><h4>Menu</h4><a href="#menu">Starters</a><a href="#menu">Mains & Karahi</a><a href="#menu">BBQ</a><a href="#menu">Desserts</a><a href="#specials">Chef's Specials</a></div>
+  <div class="f-bot">© 2026 Zaiqa Restaurant · All rights reserved · Website designed by <span style="color:var(--amber2)">Fatima tu Zahra</span></div>
+</footer>
+
+<script>
+function mTab(btn, id) {
+  document.querySelectorAll('.mtab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.mpanel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+document.getElementById('resForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('resBtn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  fetch(this.action, {method:'POST', body:new FormData(this), headers:{'Accept':'application/json'}})
+    .then(r => {
+      if(r.ok){this.style.display='none';document.getElementById('resSuccess').style.display='block';}
+      else{btn.textContent='Error — Try Again';btn.disabled=false;}
+    }).catch(()=>{btn.textContent='Error — Try Again';btn.disabled=false;});
+});
+</script>
+</body>
+</html>

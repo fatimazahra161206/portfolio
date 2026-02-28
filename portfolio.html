@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatima tu Zahra — Portfolio | CS Student & Web Developer</title>
+<meta name="description" content="Fatima tu Zahra — Cyber Security student at FAST-NUCES, web developer, game developer. Available for part-time projects in Rawalpindi.">
+<meta name="keywords" content="Fatima tu Zahra, web developer Rawalpindi, FAST NUCES, portfolio, freelance website developer Pakistan">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b2a;--cream:#f5f0e8;--gold:#c9a84c;--dg:#a07830;--gray:#6b7280;--light:#fdfbf7;--rose:#c8846a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--navy);overflow-x:hidden;}
+nav{position:fixed;top:0;width:100%;z-index:100;background:var(--navy);padding:1.1rem 4rem;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;font-weight:700;letter-spacing:1px;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-wa{background:#25D366;color:white;padding:0.5rem 1.2rem;font-size:0.75rem;letter-spacing:1px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;transition:background .2s;}
+.nav-wa:hover{background:#1ebe5c;}
+#hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:0 4rem;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;border:1px solid rgba(201,168,76,.1);border-radius:50%;}
+#hero::after{content:'';position:absolute;top:-20%;right:5%;width:380px;height:380px;border:1px solid rgba(201,168,76,.07);border-radius:50%;}
+.hero-c{max-width:750px;animation:rise 1s ease forwards;}
+.htag{display:inline-flex;align-items:center;gap:0.6rem;color:var(--gold);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(201,168,76,.35);padding:0.4rem 1rem;margin-bottom:1.5rem;}
+.dot{width:6px;height:6px;background:#25D366;border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hname{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.5rem);color:var(--cream);line-height:1.05;font-weight:900;margin-bottom:.5rem;}
+.hname span{color:var(--gold);}
+.hrole{color:var(--rose);font-size:1.05rem;font-weight:500;margin-bottom:1rem;}
+.hsub{color:rgba(245,240,232,.58);font-size:1rem;font-weight:300;line-height:1.85;margin-bottom:2.5rem;max-width:560px;}
+.hbtns{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
+.btn-g{background:var(--gold);color:var(--navy);padding:0.85rem 2rem;font-weight:700;letter-spacing:1px;text-decoration:none;font-size:0.82rem;text-transform:uppercase;transition:all .2s;display:inline-block;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;}
+.btn-g:hover{background:var(--dg);transform:translateY(-2px);}
+.btn-o{border:2px solid rgba(245,240,232,.4);color:var(--cream);padding:0.85rem 2rem;font-weight:500;letter-spacing:1px;text-decoration:none;font-size:0.82rem;text-transform:uppercase;transition:all .2s;display:inline-flex;align-items:center;gap:0.5rem;}
+.btn-o:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.btn-wa{background:#25D366;color:white;padding:0.85rem 2rem;font-weight:600;letter-spacing:1px;text-decoration:none;font-size:0.82rem;text-transform:uppercase;transition:all .2s;display:inline-flex;align-items:center;gap:0.5rem;font-family:'DM Sans',sans-serif;}
+.btn-wa:hover{background:#1ebe5c;transform:translateY(-2px);}
+.hero-social{display:flex;gap:1rem;margin-top:2rem;align-items:center;flex-wrap:wrap;}
+.hero-social a{color:rgba(245,240,232,.4);text-decoration:none;font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;display:flex;align-items:center;gap:0.4rem;}
+.hero-social a:hover{color:var(--gold);}
+.sep{color:rgba(245,240,232,.15);}
+.psec{padding:6rem 4rem;}
+.slbl{font-size:0.72rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.5rem;}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;color:var(--navy);margin-bottom:.8rem;}
+.divl{width:45px;height:3px;background:var(--gold);margin-bottom:3rem;}
+#about{background:var(--cream);}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.at p{color:#374151;line-height:1.9;font-size:0.98rem;margin-bottom:1.2rem;font-weight:300;}
+.ahl{background:var(--navy);padding:1.2rem 1.5rem;border-left:3px solid var(--gold);margin-top:1.5rem;}
+.ahl p{color:rgba(245,240,232,.8);margin:0;font-size:.92rem;line-height:1.6;}
+.acard{background:var(--navy);padding:2.3rem;position:relative;}
+.acard::before{content:'';position:absolute;top:-7px;left:-7px;width:100%;height:100%;border:2px solid var(--gold);z-index:0;}
+.acard-c{position:relative;z-index:1;}
+.acard h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.25rem;margin-bottom:1.2rem;}
+.qi{list-style:none;}
+.qi li{display:flex;align-items:center;gap:.8rem;padding:.55rem 0;border-bottom:1px solid rgba(201,168,76,.13);color:rgba(245,240,232,.7);font-size:.88rem;}
+.qi li span:first-child{color:var(--gold);min-width:20px;}
+.qi a{color:rgba(245,240,232,.7);text-decoration:none;transition:color .2s;}
+.qi a:hover{color:var(--gold);}
+#skills{background:var(--light);}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;}
+.scat{border:1px solid rgba(13,27,42,.1);padding:1.8rem;background:white;transition:all .3s;}
+.scat:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 10px 25px rgba(201,168,76,.1);}
+.sic{font-size:1.8rem;margin-bottom:.9rem;}
+.scat h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:.9rem;}
+.sl{list-style:none;}
+.sl li{padding:.38rem 0;color:var(--gray);font-size:.87rem;border-bottom:1px dashed rgba(13,27,42,.07);display:flex;align-items:center;gap:.5rem;}
+.sl li::before{content:'▸';color:var(--gold);font-size:.65rem;}
+.sbg{font-size:.62rem;background:rgba(201,168,76,.12);color:var(--dg);padding:.12rem .45rem;margin-left:auto;font-weight:700;}
+#projects{background:var(--cream);}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
+.pcard{background:white;overflow:hidden;border:1px solid rgba(13,27,42,.08);transition:all .3s;}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(13,27,42,.1);}
+.phead{background:var(--navy);padding:1.6rem 2rem;display:flex;align-items:center;gap:1rem;}
+.pcard.feat{grid-column:1/-1;}
+.pcard.feat .phead{background:linear-gradient(135deg,#1a0f08,var(--navy));padding:2.2rem;}
+.pic{font-size:1.8rem;}
+.ptyp{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.pbody{padding:1.6rem;}
+.pbody h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:.7rem;}
+.pbody p{color:var(--gray);line-height:1.7;font-size:.88rem;margin-bottom:1.1rem;}
+.ptags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;}
+.ptag{font-size:.67rem;padding:.25rem .65rem;background:rgba(201,168,76,.1);color:var(--dg);font-weight:600;border:1px solid rgba(201,168,76,.22);}
+.plnks{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
+.plink{display:inline-flex;align-items:center;gap:.3rem;color:var(--rose);font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--rose);padding-bottom:1px;transition:all .2s;}
+.plink:hover{color:var(--dg);border-color:var(--dg);}
+.plink.gh{color:var(--gray);border-color:var(--gray);}
+.plink.gh:hover{color:var(--navy);border-color:var(--navy);}
+.lbadge{background:var(--rose);color:white;font-size:.62rem;padding:.18rem .55rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-left:auto;}
+#offer{background:var(--navy);}
+#offer .slbl{color:var(--gold);}
+#offer .stitle{color:var(--cream);}
+.ogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;}
+.ocard{border:1px solid rgba(201,168,76,.15);padding:2rem;transition:all .3s;}
+.ocard:hover{border-color:rgba(201,168,76,.4);transform:translateY(-3px);}
+.oic{font-size:1.8rem;margin-bottom:1rem;}
+.ocard h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--cream);margin-bottom:.7rem;}
+.ocard p{color:rgba(245,240,232,.4);font-size:.87rem;line-height:1.7;font-weight:300;}
+.oprice{color:var(--gold);font-size:.78rem;font-weight:600;margin-top:1rem;letter-spacing:1px;}
+#contact{background:var(--light);}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
+.cinfo p{color:#374151;line-height:1.9;font-size:.95rem;font-weight:300;margin-bottom:2rem;}
+.cbtns{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
+.cwa{background:#25D366;color:white;padding:1rem 1.8rem;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;gap:.7rem;transition:all .3s;font-family:'DM Sans',sans-serif;}
+.cwa:hover{background:#1ebe5c;transform:translateX(4px);}
+.cgm{border:2px solid var(--navy);color:var(--navy);padding:1rem 1.8rem;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;gap:.7rem;transition:all .3s;}
+.cgm:hover{background:var(--navy);color:var(--cream);transform:translateX(4px);}
+.cgh{border:2px solid var(--gray);color:var(--gray);padding:1rem 1.8rem;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;gap:.7rem;transition:all .3s;}
+.cgh:hover{background:var(--navy);border-color:var(--navy);color:var(--cream);transform:translateX(4px);}
+.cform{display:flex;flex-direction:column;gap:1.1rem;}
+.cform input,.cform textarea{background:white;border:1px solid rgba(13,27,42,.15);color:var(--navy);padding:1rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;resize:vertical;}
+.cform input::placeholder,.cform textarea::placeholder{color:rgba(13,27,42,.3);}
+.cform input:focus,.cform textarea:focus{border-color:var(--gold);}
+.cform textarea{min-height:120px;}
+.cform button:disabled{opacity:.6;cursor:not-allowed;}
+.csuccess{display:none;margin-top:1rem;padding:1rem 1.4rem;background:rgba(201,168,76,.08);border:1px solid var(--gold);color:var(--dg);font-weight:600;font-size:.9rem;}
+footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;border-top:2px solid var(--gold);}
+.fl{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;display:block;margin-bottom:1rem;font-weight:700;}
+.fb p{color:rgba(245,240,232,.3);font-size:.83rem;line-height:1.7;font-weight:300;}
+.fc h4{font-family:'Playfair Display',serif;color:var(--gold);font-size:1rem;margin-bottom:1rem;}
+.fc p,.fc a{color:rgba(245,240,232,.35);font-size:.83rem;line-height:2.1;display:block;text-decoration:none;font-weight:300;transition:color .2s;}
+.fc a:hover{color:var(--gold);}
+.fbot{grid-column:1/-1;border-top:1px solid rgba(201,168,76,.15);padding-top:1.5rem;text-align:center;color:rgba(245,240,232,.2);font-size:.75rem;}
+.fbot span{color:var(--gold);}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .nav-links{display:none;}
+  .psec{padding:4rem 1.5rem;}
+  #hero{padding:6rem 1.5rem 3rem;}
+  .agrid,.cgrid{grid-template-columns:1fr;gap:2.5rem;}
+  .pcard.feat{grid-column:auto;}
+  footer{grid-template-columns:1fr;gap:2rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Fatima.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#offer">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20a%20project." target="_blank" class="nav-wa">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
+    WhatsApp Me
+  </a>
+</nav>
+
+<section id="hero">
+  <div class="hero-c">
+    <div class="htag"><span class="dot"></span> Open to Part-Time Opportunities</div>
+    <h1 class="hname">Fatima tu<br><span>Zahra.</span></h1>
+    <div class="hrole">Cyber Security Student · FAST-NUCES · Web &amp; Game Developer</div>
+    <p class="hsub">2nd Semester CS student specializing in Cyber Security at FAST University, Rawalpindi. I build professional websites for restaurants, salons &amp; businesses — growing every single day.</p>
+    <div class="hbtns">
+      <a href="#projects" class="btn-g">View My Work</a>
+      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20a%20website%20for%20my%20business." target="_blank" class="btn-wa">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
+        WhatsApp Me
+      </a>
+      <a href="#contact" class="btn-o">Hire Me</a>
+    </div>
+    <div class="hero-social">
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <span class="sep">·</span>
+      <a href="mailto:fatimazahra.161206@gmail.com">📧 Gmail</a>
+      <span class="sep">·</span>
+      <a href="https://wa.me/923295787944" target="_blank">📱 +92 329 578 7944</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="psec">
+  <div class="slbl">Who I Am</div>
+  <div class="stitle">About Me</div>
+  <div class="divl"></div>
+  <div class="agrid">
+    <div class="at">
+      <p>Hi! I'm <strong>Fatima tu Zahra</strong>, a passionate Computer Science student pursuing <strong>Cyber Security</strong> at FAST-NUCES, Rawalpindi — one of Pakistan's top tech universities. Currently in my 2nd semester and already building real, working projects.</p>
+      <p>I love turning ideas into reality through code. My speciality is building <strong>professional websites for local businesses</strong> — restaurants, salons, and shops — at affordable, student-friendly rates.</p>
+      <p>Every day I work on a new project and increase my difficulty level. My commitment is consistent growth and delivering quality work that genuinely helps businesses.</p>
+      <div class="ahl">
+        <p>🎯 <strong style="color:var(--gold)">Looking for:</strong> Part-time &amp; freelance website projects for restaurants, salons, and local businesses in Rawalpindi / Islamabad area and online.</p>
+      </div>
+    </div>
+    <div class="acard">
+      <div class="acard-c">
+        <h3>Quick Info</h3>
+        <ul class="qi">
+          <li><span>🎓</span><span>FAST-NUCES — Cyber Security, 2nd Sem</span></li>
+          <li><span>📍</span><span>Rawalpindi, Pakistan</span></li>
+          <li><span>📧</span><a href="mailto:fatimazahra.161206@gmail.com">fatimazahra.161206@gmail.com</a></li>
+          <li><span>📱</span><a href="https://wa.me/923295787944" target="_blank">+92 329 578 7944 (WhatsApp)</a></li>
+          <li><span>💻</span><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub — YOUR_GITHUB_USERNAME</a></li>
+          <li><span>💼</span><span>Available for Part-Time &amp; Freelance</span></li>
+        </ul>
+        <div style="display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap;">
+          <a href="https://wa.me/923295787944" target="_blank" class="btn-wa" style="font-size:.78rem;padding:.7rem 1.4rem;">WhatsApp</a>
+          <a href="mailto:fatimazahra.161206@gmail.com" class="btn-g" style="font-size:.78rem;padding:.7rem 1.4rem;">Email Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="psec">
+  <div class="slbl">What I Know</div>
+  <div class="stitle">Skills &amp; Technologies</div>
+  <div class="divl"></div>
+  <div class="sgrid">
+    <div class="scat"><div class="sic">🌐</div><h3>Web Dev</h3><ul class="sl"><li>HTML5 &amp; CSS3 <span class="sbg">Growing</span></li><li>JavaScript</li><li>Responsive Design</li><li>Business Websites</li></ul></div>
+    <div class="scat"><div class="sic">🎮</div><h3>Game Dev</h3><ul class="sl"><li>Python &amp; Pygame</li><li>C++ Game Logic</li><li>Sprite &amp; Collision</li><li>2D Games</li></ul></div>
+    <div class="scat"><div class="sic">🔐</div><h3>Cyber Security</h3><ul class="sl"><li>Security Basics <span class="sbg">Studying</span></li><li>Network Fundamentals</li><li>Secure Coding</li><li>FAST Curriculum</li></ul></div>
+    <div class="scat"><div class="sic">💻</div><h3>Programming</h3><ul class="sl"><li>Python</li><li>C++</li><li>OOP Concepts</li><li>Problem Solving</li></ul></div>
+    <div class="scat"><div class="sic">🛠️</div><h3>Tools</h3><ul class="sl"><li>Git &amp; GitHub</li><li>VS Code</li><li>Vercel Hosting</li><li>Formspree Email</li></ul></div>
+    <div class="scat"><div class="sic">🎨</div><h3>UI Design</h3><ul class="sl"><li>Layout &amp; Typography</li><li>Color Theory</li><li>Mobile-First</li><li>Business Design</li></ul></div>
+  </div>
+</section>
+
+<section id="projects" class="psec">
+  <div class="slbl">What I've Built</div>
+  <div class="stitle">My Projects</div>
+  <div class="divl"></div>
+  <div class="pgrid">
+
+    <!-- SALON SITE -->
+    <div class="pcard feat">
+      <div class="phead">
+        <div class="pic">💄</div>
+        <div><div class="ptyp">Web Dev · Salon Demo</div></div>
+        <div class="lbadge">Live ↗</div>
+      </div>
+      <div class="pbody">
+        <h3>Noor Salon — Beauty &amp; Spa Website</h3>
+        <p>A complete luxury salon website. Includes: hero, full services &amp; pricing, booking form (connected to Gmail), customer reviews, WhatsApp &amp; email contact buttons, gallery section, and professional footer. Fully mobile-responsive. This is an example of what I can build for any salon.</p>
+        <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Formspree</span><span class="ptag">WhatsApp</span><span class="ptag">Responsive</span></div>
+        <div class="plnks">
+          <!-- After Vercel deploy, replace "salon.html" with live URL e.g. https://noor-salon.vercel.app -->
+          <a href="salon.html" target="_blank" class="plink">View Salon Website →</a>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="plink gh">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESTAURANT SITE -->
+    <div class="pcard feat">
+      <div class="phead">
+        <div class="pic">🍽️</div>
+        <div><div class="ptyp">Web Dev · Restaurant Demo</div></div>
+        <div class="lbadge">Live ↗</div>
+      </div>
+      <div class="pbody">
+        <h3>Zaiqa Restaurant — Fine Dining Website</h3>
+        <p>A full restaurant website with 5-tab menu (Starters, Mains, BBQ, Desserts, Drinks), Chef's Specials, table reservation form (connected to Gmail), reviews, WhatsApp &amp; email contact, and footer. Unique warm amber aesthetic. Fully mobile-responsive. Example for any restaurant client.</p>
+        <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Formspree</span><span class="ptag">WhatsApp</span><span class="ptag">Responsive</span></div>
+        <div class="plnks">
+          <!-- After Vercel deploy, replace "restaurant.html" with live URL e.g. https://zaiqa-restaurant.vercel.app -->
+          <a href="restaurant.html" target="_blank" class="plink">View Restaurant Website →</a>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="plink gh">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phead"><div class="pic">✊</div><div class="ptyp">Game Development</div></div>
+      <div class="pbody">
+        <h3>Rock Paper Scissors</h3>
+        <p>Interactive Python game with score tracking, win/loss detection, and a clean replay loop.</p>
+        <div class="ptags"><span class="ptag">Python</span><span class="ptag">Game Logic</span><span class="ptag">CLI</span></div>
+        <div class="plnks"><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="plink gh">View on GitHub ↗</a></div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phead"><div class="pic">🎮</div><div class="ptyp">Game Development</div></div>
+      <div class="pbody">
+        <h3>Tumblepop Game</h3>
+        <p>Tumblepop-inspired game: sprite movement, collision detection, enemies, multiple game states.</p>
+        <div class="ptags"><span class="ptag">Python</span><span class="ptag">Pygame</span><span class="ptag">OOP</span><span class="ptag">Sprites</span></div>
+        <div class="plnks"><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="plink gh">View on GitHub ↗</a></div>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="phead"><div class="pic">🚀</div><div class="ptyp">In Progress</div></div>
+      <div class="pbody">
+        <h3>More Every Day...</h3>
+        <p>Building new projects daily, always increasing difficulty. New websites, apps, and games always in progress.</p>
+        <div class="ptags"><span class="ptag">Daily Growth</span><span class="ptag">More Coming</span></div>
+        <div class="plnks"><a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20to%20collaborate." target="_blank" class="plink">Collaborate →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="offer" class="psec">
+  <div class="slbl">For Businesses</div>
+  <div class="stitle">What I Can Build For You</div>
+  <div class="divl"></div>
+  <div class="ogrid">
+    <div class="ocard"><div class="oic">🍽️</div><h3>Restaurant Website</h3><p>Full menu, reservation form, WhatsApp contact, reviews, mobile design. Customers find &amp; book you online.</p><div class="oprice">Affordable Rates</div></div>
+    <div class="ocard"><div class="oic">💄</div><h3>Salon Website</h3><p>Booking system, services &amp; pricing, gallery, contact via WhatsApp or email. Professional and elegant.</p><div class="oprice">Affordable Rates</div></div>
+    <div class="ocard"><div class="oic">🏪</div><h3>Shop / Business</h3><p>Product showcase, contact form, location, social links. For any local business wanting an online presence.</p><div class="oprice">Affordable Rates</div></div>
+    <div class="ocard"><div class="oic">📱</div><h3>Landing Page</h3><p>One-page site to showcase services and get customers to call or WhatsApp you directly. Fast &amp; effective.</p><div class="oprice">Affordable Rates</div></div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <p style="color:rgba(245,240,232,.5);margin-bottom:1.5rem;font-size:.92rem;font-weight:300;">Interested? I respond fast — usually within a few hours!</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20need%20a%20website%20for%20my%20business." target="_blank" class="btn-wa">WhatsApp Me Now</a>
+      <a href="mailto:fatimazahra.161206@gmail.com?subject=Website%20Project%20Enquiry" class="btn-g">Email Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="psec">
+  <div class="slbl">Get In Touch</div>
+  <div class="stitle">Contact Me</div>
+  <div class="divl"></div>
+  <div class="cgrid">
+    <div class="cinfo">
+      <p>I'm available for part-time web projects — restaurants, salons, shops, and more. WhatsApp is the fastest way to reach me. I reply within hours and am always happy to discuss your project!</p>
+      <div class="cbtns">
+        <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20found%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="cwa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
+          WhatsApp — +92 329 578 7944
+        </a>
+        <a href="mailto:fatimazahra.161206@gmail.com" class="cgm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          fatimazahra.161206@gmail.com
+        </a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="cgh">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+    <!--
+      SETUP FORMSPREE (free):
+      1. Go to formspree.io — sign up with fatimazahra.161206@gmail.com
+      2. Create a new form, copy your Form ID
+      3. Replace YOUR_FORM_ID below with your real ID
+      4. Messages will arrive in your Gmail!
+    -->
+    <form class="cform" id="cForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="hidden" name="_subject" value="New Message — Fatima tu Zahra Portfolio">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="What do you need? (e.g. Restaurant website)">
+      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+      <button type="submit" class="btn-g" id="cBtn" style="width:fit-content;">Send Message ✉️</button>
+    </form>
+    <div class="csuccess" id="cSuccess">✅ Message sent! I'll reply very soon — or WhatsApp me for faster response!</div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb"><span class="fl">Fatima.</span><p>Cyber Security student at FAST-NUCES, Rawalpindi. Building professional websites for businesses at affordable rates. Available for part-time &amp; freelance.</p></div>
+  <div class="fc">
+    <h4>Navigation</h4>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#offer">Services for Business</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="fc">
+    <h4>My Work &amp; Links</h4>
+    <!-- Replace these with Vercel live URLs after hosting -->
+    <a href="salon.html" target="_blank">💄 Noor Salon Website</a>
+    <a href="restaurant.html" target="_blank">🍽️ Zaiqa Restaurant Website</a>
+    <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">💻 GitHub Profile</a>
+    <a href="https://wa.me/923295787944" target="_blank">📱 WhatsApp: +92 329 578 7944</a>
+    <a href="mailto:fatimazahra.161206@gmail.com">📧 Gmail</a>
+  </div>
+  <div class="fbot">© 2026 <span>Fatima tu Zahra</span> · FAST-NUCES Cyber Security · Rawalpindi, Pakistan</div>
+</footer>
+
+<script>
+document.getElementById('cForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('cBtn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  fetch(this.action, {method:'POST', body:new FormData(this), headers:{'Accept':'application/json'}})
+    .then(r => {
+      if(r.ok){this.style.display='none';document.getElementById('cSuccess').style.display='block';}
+      else{btn.textContent='Error — Try Again';btn.disabled=false;}
+    }).catch(()=>{btn.textContent='Error — Try Again';btn.disabled=false;});
+});
+</script>
+</body>
+</html>
