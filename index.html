@@ -3,387 +3,656 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fatima tu Zahra — Portfolio | CS Student & Web Developer</title>
-<meta name="description" content="Fatima tu Zahra — Cyber Security student at FAST-NUCES, web developer, game developer. Available for part-time projects in Rawalpindi.">
-<meta name="keywords" content="Fatima tu Zahra, web developer Rawalpindi, FAST NUCES, portfolio, freelance website developer Pakistan">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Fatima tu Zahra — CS Student & Web Developer</title>
+<meta name="description" content="Cyber Security student at FAST-NUCES. Web developer building professional websites for restaurants, salons & businesses at affordable rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0d1b2a;--cream:#f5f0e8;--gold:#c9a84c;--dg:#a07830;--gray:#6b7280;--light:#fdfbf7;--rose:#c8846a;}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--light);color:var(--navy);overflow-x:hidden;}
-nav{position:fixed;top:0;width:100%;z-index:100;background:var(--navy);padding:1.1rem 4rem;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
-.nav-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;font-weight:700;letter-spacing:1px;}
-.nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{color:var(--cream);text-decoration:none;font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;transition:color .2s;}
-.nav-links a:hover{color:var(--gold);}
-.nav-wa{background:#25D366;color:white;padding:0.5rem 1.2rem;font-size:0.75rem;letter-spacing:1px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;transition:background .2s;}
-.nav-wa:hover{background:#1ebe5c;}
-#hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:0 4rem;position:relative;overflow:hidden;}
-#hero::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;border:1px solid rgba(201,168,76,.1);border-radius:50%;}
-#hero::after{content:'';position:absolute;top:-20%;right:5%;width:380px;height:380px;border:1px solid rgba(201,168,76,.07);border-radius:50%;}
-.hero-c{max-width:750px;animation:rise 1s ease forwards;}
-.htag{display:inline-flex;align-items:center;gap:0.6rem;color:var(--gold);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(201,168,76,.35);padding:0.4rem 1rem;margin-bottom:1.5rem;}
-.dot{width:6px;height:6px;background:#25D366;border-radius:50%;animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.hname{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.5rem);color:var(--cream);line-height:1.05;font-weight:900;margin-bottom:.5rem;}
-.hname span{color:var(--gold);}
-.hrole{color:var(--rose);font-size:1.05rem;font-weight:500;margin-bottom:1rem;}
-.hsub{color:rgba(245,240,232,.58);font-size:1rem;font-weight:300;line-height:1.85;margin-bottom:2.5rem;max-width:560px;}
-.hbtns{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
-.btn-g{background:var(--gold);color:var(--navy);padding:0.85rem 2rem;font-weight:700;letter-spacing:1px;text-decoration:none;font-size:0.82rem;text-transform:uppercase;transition:all .2s;display:inline-block;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;}
-.btn-g:hover{background:var(--dg);transform:translateY(-2px);}
-.btn-o{border:2px solid rgba(245,240,232,.4);color:var(--cream);padding:0.85rem 2rem;font-weight:500;letter-spacing:1px;text-decoration:none;font-size:0.82rem;text-transform:uppercase;transition:all .2s;display:inline-flex;align-items:center;gap:0.5rem;}
-.btn-o:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
-.btn-wa{background:#25D366;color:white;padding:0.85rem 2rem;font-weight:600;letter-spacing:1px;text-decoration:none;font-size:0.82rem;text-transform:uppercase;transition:all .2s;display:inline-flex;align-items:center;gap:0.5rem;font-family:'DM Sans',sans-serif;}
-.btn-wa:hover{background:#1ebe5c;transform:translateY(-2px);}
-.hero-social{display:flex;gap:1rem;margin-top:2rem;align-items:center;flex-wrap:wrap;}
-.hero-social a{color:rgba(245,240,232,.4);text-decoration:none;font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;display:flex;align-items:center;gap:0.4rem;}
-.hero-social a:hover{color:var(--gold);}
-.sep{color:rgba(245,240,232,.15);}
-.psec{padding:6rem 4rem;}
-.slbl{font-size:0.72rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.5rem;}
-.stitle{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;color:var(--navy);margin-bottom:.8rem;}
-.divl{width:45px;height:3px;background:var(--gold);margin-bottom:3rem;}
-#about{background:var(--cream);}
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.at p{color:#374151;line-height:1.9;font-size:0.98rem;margin-bottom:1.2rem;font-weight:300;}
-.ahl{background:var(--navy);padding:1.2rem 1.5rem;border-left:3px solid var(--gold);margin-top:1.5rem;}
-.ahl p{color:rgba(245,240,232,.8);margin:0;font-size:.92rem;line-height:1.6;}
-.acard{background:var(--navy);padding:2.3rem;position:relative;}
-.acard::before{content:'';position:absolute;top:-7px;left:-7px;width:100%;height:100%;border:2px solid var(--gold);z-index:0;}
-.acard-c{position:relative;z-index:1;}
-.acard h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.25rem;margin-bottom:1.2rem;}
-.qi{list-style:none;}
-.qi li{display:flex;align-items:center;gap:.8rem;padding:.55rem 0;border-bottom:1px solid rgba(201,168,76,.13);color:rgba(245,240,232,.7);font-size:.88rem;}
-.qi li span:first-child{color:var(--gold);min-width:20px;}
-.qi a{color:rgba(245,240,232,.7);text-decoration:none;transition:color .2s;}
-.qi a:hover{color:var(--gold);}
-#skills{background:var(--light);}
-.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;}
-.scat{border:1px solid rgba(13,27,42,.1);padding:1.8rem;background:white;transition:all .3s;}
-.scat:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 10px 25px rgba(201,168,76,.1);}
-.sic{font-size:1.8rem;margin-bottom:.9rem;}
-.scat h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:.9rem;}
-.sl{list-style:none;}
-.sl li{padding:.38rem 0;color:var(--gray);font-size:.87rem;border-bottom:1px dashed rgba(13,27,42,.07);display:flex;align-items:center;gap:.5rem;}
-.sl li::before{content:'▸';color:var(--gold);font-size:.65rem;}
-.sbg{font-size:.62rem;background:rgba(201,168,76,.12);color:var(--dg);padding:.12rem .45rem;margin-left:auto;font-weight:700;}
-#projects{background:var(--cream);}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
-.pcard{background:white;overflow:hidden;border:1px solid rgba(13,27,42,.08);transition:all .3s;}
-.pcard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(13,27,42,.1);}
-.phead{background:var(--navy);padding:1.6rem 2rem;display:flex;align-items:center;gap:1rem;}
-.pcard.feat{grid-column:1/-1;}
-.pcard.feat .phead{background:linear-gradient(135deg,#1a0f08,var(--navy));padding:2.2rem;}
-.pic{font-size:1.8rem;}
-.ptyp{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;}
-.pbody{padding:1.6rem;}
-.pbody h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:.7rem;}
-.pbody p{color:var(--gray);line-height:1.7;font-size:.88rem;margin-bottom:1.1rem;}
-.ptags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;}
-.ptag{font-size:.67rem;padding:.25rem .65rem;background:rgba(201,168,76,.1);color:var(--dg);font-weight:600;border:1px solid rgba(201,168,76,.22);}
-.plnks{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
-.plink{display:inline-flex;align-items:center;gap:.3rem;color:var(--rose);font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--rose);padding-bottom:1px;transition:all .2s;}
-.plink:hover{color:var(--dg);border-color:var(--dg);}
-.plink.gh{color:var(--gray);border-color:var(--gray);}
-.plink.gh:hover{color:var(--navy);border-color:var(--navy);}
-.lbadge{background:var(--rose);color:white;font-size:.62rem;padding:.18rem .55rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-left:auto;}
-#offer{background:var(--navy);}
-#offer .slbl{color:var(--gold);}
-#offer .stitle{color:var(--cream);}
-.ogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;}
-.ocard{border:1px solid rgba(201,168,76,.15);padding:2rem;transition:all .3s;}
-.ocard:hover{border-color:rgba(201,168,76,.4);transform:translateY(-3px);}
-.oic{font-size:1.8rem;margin-bottom:1rem;}
-.ocard h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--cream);margin-bottom:.7rem;}
-.ocard p{color:rgba(245,240,232,.4);font-size:.87rem;line-height:1.7;font-weight:300;}
-.oprice{color:var(--gold);font-size:.78rem;font-weight:600;margin-top:1rem;letter-spacing:1px;}
-#contact{background:var(--light);}
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
-.cinfo p{color:#374151;line-height:1.9;font-size:.95rem;font-weight:300;margin-bottom:2rem;}
-.cbtns{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
-.cwa{background:#25D366;color:white;padding:1rem 1.8rem;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;gap:.7rem;transition:all .3s;font-family:'DM Sans',sans-serif;}
-.cwa:hover{background:#1ebe5c;transform:translateX(4px);}
-.cgm{border:2px solid var(--navy);color:var(--navy);padding:1rem 1.8rem;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;gap:.7rem;transition:all .3s;}
-.cgm:hover{background:var(--navy);color:var(--cream);transform:translateX(4px);}
-.cgh{border:2px solid var(--gray);color:var(--gray);padding:1rem 1.8rem;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-flex;align-items:center;gap:.7rem;transition:all .3s;}
-.cgh:hover{background:var(--navy);border-color:var(--navy);color:var(--cream);transform:translateX(4px);}
-.cform{display:flex;flex-direction:column;gap:1.1rem;}
-.cform input,.cform textarea{background:white;border:1px solid rgba(13,27,42,.15);color:var(--navy);padding:1rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;resize:vertical;}
-.cform input::placeholder,.cform textarea::placeholder{color:rgba(13,27,42,.3);}
-.cform input:focus,.cform textarea:focus{border-color:var(--gold);}
-.cform textarea{min-height:120px;}
-.cform button:disabled{opacity:.6;cursor:not-allowed;}
-.csuccess{display:none;margin-top:1rem;padding:1rem 1.4rem;background:rgba(201,168,76,.08);border:1px solid var(--gold);color:var(--dg);font-weight:600;font-size:.9rem;}
-footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;border-top:2px solid var(--gold);}
-.fl{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;display:block;margin-bottom:1rem;font-weight:700;}
-.fb p{color:rgba(245,240,232,.3);font-size:.83rem;line-height:1.7;font-weight:300;}
-.fc h4{font-family:'Playfair Display',serif;color:var(--gold);font-size:1rem;margin-bottom:1rem;}
-.fc p,.fc a{color:rgba(245,240,232,.35);font-size:.83rem;line-height:2.1;display:block;text-decoration:none;font-weight:300;transition:color .2s;}
-.fc a:hover{color:var(--gold);}
-.fbot{grid-column:1/-1;border-top:1px solid rgba(201,168,76,.15);padding-top:1.5rem;text-align:center;color:rgba(245,240,232,.2);font-size:.75rem;}
-.fbot span{color:var(--gold);}
-@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#04040a;--bg2:#080810;--s1:#0c0c18;--s2:#111120;--s3:#16162a;
+  --p:#818cf8;--pa:rgba(129,140,248,.12);--pb:rgba(129,140,248,.06);
+  --a:#f9a8d4;--aa:rgba(249,168,212,.1);
+  --e:#34d399;--ea:rgba(52,211,153,.1);
+  --o:#fb923c;--oa:rgba(251,146,60,.1);
+  --g:linear-gradient(135deg,#818cf8 0%,#f9a8d4 100%);
+  --g2:linear-gradient(135deg,#34d399,#818cf8);
+  --g3:linear-gradient(135deg,#f9a8d4,#fb923c);
+  --tx:#eeeeff;--tx2:#a5b4fc;--mu:#64748b;--dim:#1e1e36;
+  --r:8px;--r2:14px;--r3:20px;--r4:28px;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--tx);font-family:'Cabinet Grotesk',sans-serif;overflow-x:hidden;cursor:none}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:none;font-family:'Cabinet Grotesk',sans-serif}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--p);border-radius:2px}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ── CURSOR ── */
+#cur{width:10px;height:10px;background:var(--p);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:width .2s,height .2s,background .2s;mix-blend-mode:screen;transform:translate(-50%,-50%)}
+#curR{width:32px;height:32px;border:1px solid rgba(129,140,248,.5);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
+.hoverable:hover~#cur,body:has(.hoverable:hover) #cur{width:40px!important;height:40px!important;background:rgba(129,140,248,.2)!important;border:1px solid var(--p)!important}
+
+/* ── GRID LINES ── */
+body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(129,140,248,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(129,140,248,.03) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;z-index:0}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 3rem;background:rgba(4,4,10,.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(129,140,248,.07)}
+.nl{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;letter-spacing:-.5px;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nm{display:flex;gap:2rem}
+.nm a{font-size:13px;font-weight:500;color:var(--mu);transition:color .2s;letter-spacing:.02em}
+.nm a:hover{color:var(--tx)}
+.nc{font-size:13px;font-weight:700;color:white;background:var(--g);border:none;padding:.48rem 1.4rem;border-radius:100px;transition:all .2s;box-shadow:0 4px 20px rgba(129,140,248,.25)}
+.nc:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(129,140,248,.4)}
+.hb{display:none;background:none;border:none;color:var(--tx);padding:.4rem;position:fixed;top:1.2rem;right:1.5rem;z-index:201}
+.mob-nav{display:none;position:fixed;inset:0;background:rgba(4,4,10,.97);backdrop-filter:blur(20px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.mob-nav.open{display:flex}
+.mob-nav a{font-family:'Syne',sans-serif;font-size:32px;font-weight:700;color:var(--mu);transition:color .2s}
+.mob-nav a:hover{color:var(--tx)}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden;z-index:1}
+#hcv{position:absolute;inset:0;z-index:0}
+.hero-c{position:relative;z-index:2;max-width:860px}
+.h-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(52,211,153,.3);background:rgba(52,211,153,.06);color:var(--e);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:2.25rem;animation:up .7s ease both}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--e);animation:blink 1.8s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 6px var(--e)}50%{opacity:.4;box-shadow:none}}
+.h-name{font-family:'Syne',sans-serif;font-size:clamp(56px,11vw,120px);font-weight:800;line-height:.88;letter-spacing:-5px;margin-bottom:1.5rem;animation:up .7s .08s ease both}
+.h-n1{display:block;color:var(--tx)}
+.h-n2{display:block;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic}
+.h-role{font-size:clamp(15px,2.2vw,20px);color:var(--mu);font-weight:400;line-height:1.65;max-width:520px;margin:0 auto 2.5rem;animation:up .7s .16s ease both}
+.h-role b{color:var(--tx2);font-weight:600}
+.h-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;animation:up .7s .24s ease both;margin-bottom:3.5rem}
+.btn-p{font-size:14px;font-weight:700;color:#04040a;background:var(--g);border:none;padding:.7rem 1.9rem;border-radius:100px;transition:all .2s;box-shadow:0 6px 24px rgba(129,140,248,.3)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(129,140,248,.45)}
+.btn-o{font-size:14px;font-weight:700;color:var(--p);background:transparent;border:1.5px solid rgba(129,140,248,.3);padding:.68rem 1.9rem;border-radius:100px;transition:all .2s}
+.btn-o:hover{border-color:var(--p);background:var(--pa);transform:translateY(-2px)}
+.btn-wa{font-size:14px;font-weight:700;color:#04040a;background:var(--g2);border:none;padding:.7rem 1.9rem;border-radius:100px;transition:all .2s;box-shadow:0 6px 24px rgba(52,211,153,.25)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(52,211,153,.4)}
+.h-stats{display:inline-flex;gap:0;background:var(--s1);border:1px solid rgba(129,140,248,.1);border-radius:var(--r4);overflow:hidden;animation:up .7s .32s ease both}
+.hs{padding:1.1rem 2rem;text-align:center;border-right:1px solid rgba(129,140,248,.08)}
+.hs:last-child{border-right:none}
+.hs-n{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.hs-l{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--mu);margin-top:3px}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── SCROLL CUE ── */
+.sc{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;animation:up .7s .5s ease both}
+.sc span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.sc-l{width:1px;height:44px;background:linear-gradient(to bottom,var(--p),transparent);animation:sl 2s ease infinite}
+@keyframes sl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ── SECTION COMMON ── */
+.sec{padding:6rem 3rem;max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.sl{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem;display:flex;align-items:center;gap:10px}
+.sl::before{content:'';width:24px;height:1.5px;background:var(--p);flex-shrink:0}
+.sh{font-family:'Syne',sans-serif;font-size:clamp(30px,5vw,50px);font-weight:800;letter-spacing:-2.5px;line-height:.95;margin-bottom:1rem}
+.ss{font-size:16px;color:var(--mu);line-height:1.75;max-width:500px}
+
+/* ── ABOUT ── */
+#about .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start;margin-top:3.5rem}
+.about-text p{font-size:15px;color:var(--mu);line-height:1.85;margin-bottom:1.25rem}
+.about-text p b{color:var(--tx)}
+.looking-box{background:var(--s1);border:1px solid rgba(52,211,153,.2);border-radius:var(--r3);padding:1.25rem 1.5rem;margin-top:1.5rem;margin-bottom:1.75rem}
+.looking-box p{font-size:13.5px;color:var(--mu);line-height:1.75;margin-bottom:0}
+.looking-box b{color:var(--e)}
+.quick-info{background:var(--s1);border:1px solid rgba(129,140,248,.1);border-radius:var(--r3);overflow:hidden}
+.qi-head{padding:1.25rem 1.5rem;background:var(--s2);border-bottom:1px solid rgba(129,140,248,.08);display:flex;align-items:center;gap:10px}
+.qi-av{width:44px;height:44px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:#04040a;flex-shrink:0}
+.qi-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700}
+.qi-tag{font-size:11px;color:var(--e);font-weight:600}
+.qi-row{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.03)}
+.qi-row:last-child{border-bottom:none}
+.qi-k{font-size:12px;color:var(--mu)}
+.qi-v{font-size:13px;font-weight:600;color:var(--tx);text-align:right;max-width:220px}
+.qi-v.accent{background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.qi-v a{color:var(--tx2);text-decoration:none}
+.qi-v a:hover{color:var(--p)}
+
+/* ── SKILLS ── */
+#skills{padding:6rem 3rem}
+.skills-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+.sk-cat{background:var(--s1);border:1px solid rgba(129,140,248,.08);border-radius:var(--r3);padding:1.5rem;transition:all .25s;position:relative;overflow:hidden}
+.sk-cat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;transition:opacity .25s;opacity:0}
+.sk-cat:hover{border-color:rgba(129,140,248,.22);transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.sk-cat:hover::before{opacity:1}
+.sk-cat.c1::before{background:var(--g)}
+.sk-cat.c2::before{background:var(--g2)}
+.sk-cat.c3::before{background:var(--g3)}
+.sk-cat.c4::before{background:linear-gradient(135deg,var(--o),var(--e))}
+.sk-cat.c5::before{background:linear-gradient(135deg,#60a5fa,var(--p))}
+.sk-cat.c6::before{background:var(--g3)}
+.sk-ico{font-size:26px;margin-bottom:.9rem}
+.sk-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:.75rem}
+.sk-items{display:flex;flex-direction:column;gap:.45rem}
+.sk-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mu)}
+.sk-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--p);flex-shrink:0}
+.sk-item b{color:var(--tx);font-weight:500}
+.sk-item span{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-left:auto;color:var(--p);background:var(--pa);padding:2px 7px;border-radius:100px}
+
+/* ── PROJECTS ── */
+#projects{padding:6rem 3rem}
+.proj-feat{display:grid;grid-template-columns:1fr 340px;gap:2rem;background:var(--s1);border:1px solid rgba(129,140,248,.12);border-radius:var(--r4);padding:2.5rem;margin-top:3rem;position:relative;overflow:hidden;transition:all .3s}
+.proj-feat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--g)}
+.proj-feat:hover{border-color:rgba(129,140,248,.25);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.proj-badge{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--e);background:var(--ea);border:1px solid rgba(52,211,153,.2);padding:3px 12px;border-radius:100px;display:inline-flex;align-items:center;gap:6px;margin-bottom:1rem}
+.proj-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--e)}
+.pf-title{font-family:'Syne',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-1.5px;margin-bottom:.9rem}
+.pf-desc{font-size:14px;color:var(--mu);line-height:1.8;margin-bottom:1.5rem;max-width:520px}
+.ptags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+.pt{font-size:11px;font-weight:600;color:var(--p);background:var(--pa);border:1px solid rgba(129,140,248,.18);padding:.25rem .75rem;border-radius:100px}
+.plinks{display:flex;gap:.75rem;flex-wrap:wrap}
+.pl{font-size:13px;font-weight:700;padding:.5rem 1.2rem;border-radius:100px;transition:all .2s;border:none}
+.pl.live{color:#04040a;background:var(--g);box-shadow:0 4px 16px rgba(129,140,248,.25)}
+.pl.live:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(129,140,248,.4)}
+.pl.gh{color:var(--p);background:var(--pa);border:1px solid rgba(129,140,248,.2)}
+.pl.gh:hover{background:rgba(129,140,248,.2)}
+.proj-side{display:flex;flex-direction:column;gap:1rem}
+.pmet{background:var(--s2);border:1px solid rgba(129,140,248,.08);border-radius:var(--r2);padding:1.25rem;text-align:center;transition:all .2s}
+.pmet:hover{border-color:rgba(129,140,248,.2)}
+.pm-n{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.pm-l{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--mu);margin-top:4px}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.25rem}
+.pc{background:var(--s1);border:1px solid rgba(129,140,248,.08);border-radius:var(--r3);padding:1.5rem;transition:all .25s;position:relative;overflow:hidden}
+.pc::after{content:'';position:absolute;inset:0;background:var(--g);opacity:0;transition:opacity .25s}
+.pc:hover{border-color:rgba(129,140,248,.22);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.pc-emoji{font-size:28px;margin-bottom:.75rem}
+.pc-type{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.5rem}
+.pc-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.5px;margin-bottom:.65rem}
+.pc-desc{font-size:13px;color:var(--mu);line-height:1.7;margin-bottom:1.1rem}
+.pc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.pc-tag{font-size:10px;color:var(--tx2);background:var(--s2);border:1px solid var(--dim);padding:.2rem .65rem;border-radius:100px}
+.pc-link{font-size:12px;font-weight:700;color:var(--p);background:var(--pa);border:1px solid rgba(129,140,248,.18);padding:.38rem .9rem;border-radius:100px;transition:all .15s;display:inline-block}
+.pc-link:hover{background:rgba(129,140,248,.2);transform:translateY(-1px)}
+.pc-link.live{color:#04040a;background:var(--g);border-color:transparent}
+
+/* ── SERVICES ── */
+#services{padding:6rem 3rem;background:var(--bg2);border-top:1px solid rgba(129,140,248,.06);border-bottom:1px solid rgba(129,140,248,.06)}
+#services .sec{max-width:1100px}
+.serv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:3rem}
+.sv{background:var(--s1);border:1px solid rgba(129,140,248,.08);border-radius:var(--r3);padding:1.5rem;text-align:center;transition:all .25s;cursor:none}
+.sv:hover{border-color:rgba(129,140,248,.25);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.sv-ico{font-size:32px;margin-bottom:.9rem}
+.sv-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:.6rem}
+.sv-desc{font-size:13px;color:var(--mu);line-height:1.7;margin-bottom:.9rem}
+.sv-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--e);background:var(--ea);padding:3px 10px;border-radius:100px}
+.serv-cta{text-align:center;margin-top:3rem}
+.serv-cta p{font-size:15px;color:var(--mu);margin-bottom:1.5rem}
+
+/* ── CONTACT ── */
+#contact{padding:7rem 3rem;text-align:center;position:relative;overflow:hidden;z-index:1}
+#contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(129,140,248,.07),transparent 70%);pointer-events:none}
+.ct-head{font-family:'Syne',sans-serif;font-size:clamp(40px,7vw,76px);font-weight:800;letter-spacing:-4px;line-height:.9;margin-bottom:1.25rem;position:relative;z-index:1}
+.ct-l1{display:block;color:var(--tx)}
+.ct-l2{display:block;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic}
+.ct-sub{font-size:16px;color:var(--mu);max-width:420px;margin:0 auto 3rem;line-height:1.75;position:relative;z-index:1}
+.ct-cards{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.ctc{background:var(--s1);border:1px solid rgba(129,140,248,.1);border-radius:var(--r3);padding:1.4rem 1.8rem;min-width:175px;transition:all .25s;text-decoration:none;display:flex;flex-direction:column;align-items:center;cursor:none}
+.ctc:hover{border-color:rgba(129,140,248,.3);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.ctc-ico{font-size:22px;margin-bottom:.4rem}
+.ctc-l{font-size:11px;color:var(--mu);margin-bottom:.15rem;font-weight:500}
+.ctc-v{font-size:13px;font-weight:700;color:var(--p)}
+.contact-form{max-width:540px;margin:3rem auto 0;background:var(--s1);border:1px solid rgba(129,140,248,.1);border-radius:var(--r4);padding:2rem;text-align:left;position:relative;z-index:1}
+.cf-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:1.5rem;text-align:center}
+.cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.cf-field{margin-bottom:1rem}
+.cf-field label{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:.4rem}
+.cf-field input,.cf-field textarea,.cf-field select{width:100%;background:var(--s2);border:1px solid rgba(129,140,248,.12);border-radius:var(--r);padding:.65rem .9rem;color:var(--tx);font-size:14px;font-family:'Cabinet Grotesk',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
+.cf-field input:focus,.cf-field textarea:focus,.cf-field select:focus{border-color:rgba(129,140,248,.4);box-shadow:0 0 0 3px rgba(129,140,248,.08)}
+.cf-field input::placeholder,.cf-field textarea::placeholder{color:var(--dim)}
+.cf-field textarea{resize:vertical;min-height:100px}
+.cf-submit{width:100%;background:var(--g);border:none;padding:.8rem;border-radius:100px;font-size:14px;font-weight:700;color:#04040a;transition:all .2s;box-shadow:0 4px 16px rgba(129,140,248,.25)}
+.cf-submit:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(129,140,248,.4)}
+.cf-success{display:none;text-align:center;padding:1rem;color:var(--e);font-size:14px;font-weight:600}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid rgba(129,140,248,.07);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;position:relative;z-index:1}
+.ft-l{font-size:13px;color:var(--dim)}
+.ft-l span{color:var(--p)}
+.ft-links{display:flex;gap:1.5rem}
+.ft-links a{font-size:12px;color:var(--dim);transition:color .2s}
+.ft-links a:hover{color:var(--p)}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* ── MOBILE ── */
 @media(max-width:900px){
-  nav{padding:1rem 1.5rem;}
-  .nav-links{display:none;}
-  .psec{padding:4rem 1.5rem;}
-  #hero{padding:6rem 1.5rem 3rem;}
-  .agrid,.cgrid{grid-template-columns:1fr;gap:2.5rem;}
-  .pcard.feat{grid-column:auto;}
-  footer{grid-template-columns:1fr;gap:2rem;}
+  nav .nm,.nc{display:none}
+  .hb{display:flex;align-items:center;justify-content:center}
+  .sec{padding:5rem 1.5rem}
+  #about .about-wrap{grid-template-columns:1fr;gap:2.5rem}
+  .skills-cats{grid-template-columns:1fr 1fr}
+  .proj-feat{grid-template-columns:1fr}
+  .proj-side{flex-direction:row;flex-wrap:wrap}
+  .pmet{flex:1;min-width:100px}
+  .proj-grid{grid-template-columns:1fr}
+  .serv-grid{grid-template-columns:1fr 1fr}
+  .cf-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+  nav{padding:1rem 1.25rem}
+  .h-stats .hs{padding:.9rem 1.25rem}
+}
+@media(max-width:600px){
+  .skills-cats{grid-template-columns:1fr}
+  .serv-grid{grid-template-columns:1fr}
+  .hs-n{font-size:22px}
 }
 </style>
 </head>
 <body>
 
+<div id="cur"></div>
+<div id="curR"></div>
+
+<!-- MOBILE NAV TOGGLE -->
+<button class="hb" id="hbBtn" onclick="toggleMob()" aria-label="Menu">
+  <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M1 1h20M1 8h20M1 15h20"/>
+  </svg>
+</button>
+<div class="mob-nav" id="mobNav">
+  <a href="#about" onclick="toggleMob()">About</a>
+  <a href="#skills" onclick="toggleMob()">Skills</a>
+  <a href="#projects" onclick="toggleMob()">Projects</a>
+  <a href="#services" onclick="toggleMob()">Services</a>
+  <a href="#contact" onclick="toggleMob()">Contact</a>
+</div>
+
 <nav>
-  <div class="nav-logo">Fatima.</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#offer">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20a%20project." target="_blank" class="nav-wa">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
-    WhatsApp Me
+  <div class="nl">Fatima.</div>
+  <div class="nm">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20a%20project." target="_blank">
+    <button class="nc">WhatsApp Me</button>
   </a>
 </nav>
 
+<!-- ══════════ HERO ══════════ -->
 <section id="hero">
+  <canvas id="hcv"></canvas>
   <div class="hero-c">
-    <div class="htag"><span class="dot"></span> Open to Part-Time Opportunities</div>
-    <h1 class="hname">Fatima tu<br><span>Zahra.</span></h1>
-    <div class="hrole">Cyber Security Student · FAST-NUCES · Web &amp; Game Developer</div>
-    <p class="hsub">2nd Semester CS student specializing in Cyber Security at FAST University, Rawalpindi. I build professional websites for restaurants, salons &amp; businesses — growing every single day.</p>
-    <div class="hbtns">
-      <a href="#projects" class="btn-g">View My Work</a>
-      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20a%20website%20for%20my%20business." target="_blank" class="btn-wa">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
-        WhatsApp Me
-      </a>
-      <a href="#contact" class="btn-o">Hire Me</a>
+    <div class="h-badge"><span class="live-dot"></span>Open to Part-Time Opportunities</div>
+    <h1 class="h-name">
+      <span class="h-n1">Fatima tu</span>
+      <span class="h-n2">Zahra.</span>
+    </h1>
+    <p class="h-role">
+      <b>Cyber Security Student</b> · FAST-NUCES Rawalpindi ·
+      Web &amp; Game Developer building real websites for real businesses.
+    </p>
+    <div class="h-btns">
+      <a href="#projects"><button class="btn-p">View My Work</button></a>
+      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20a%20website%20for%20my%20business." target="_blank"><button class="btn-wa">WhatsApp Me</button></a>
+      <a href="#contact"><button class="btn-o">Hire Me</button></a>
     </div>
-    <div class="hero-social">
-      <a href="https://github.com/fatimazahra161206/portfolio" target="_blank">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        GitHub
-      </a>
-      <span class="sep">·</span>
-      <a href="/cdn-cgi/l/email-protection#31575045585c504b505943501f00070003010771565c50585d1f525e5c">📧 Gmail</a>
-      <span class="sep">·</span>
-      <a href="https://wa.me/923295787944" target="_blank">📱 +92 329 578 7944</a>
+    <div class="h-stats">
+      <div class="hs"><div class="hs-n">2nd</div><div class="hs-l">Semester</div></div>
+      <div class="hs"><div class="hs-n">3+</div><div class="hs-l">Projects Live</div></div>
+      <div class="hs"><div class="hs-n">Fast</div><div class="hs-l">Reply Time</div></div>
+      <div class="hs"><div class="hs-n">PKR</div><div class="hs-l">Affordable</div></div>
     </div>
   </div>
+  <div class="sc"><span>Scroll</span><div class="sc-l"></div></div>
 </section>
 
-<section id="about" class="psec">
-  <div class="slbl">Who I Am</div>
-  <div class="stitle">About Me</div>
-  <div class="divl"></div>
-  <div class="agrid">
-    <div class="at">
-      <p>Hi! I'm <strong>Fatima tu Zahra</strong>, a passionate Computer Science student pursuing <strong>Cyber Security</strong> at FAST-NUCES, Rawalpindi — one of Pakistan's top tech universities. Currently in my 2nd semester and already building real, working projects.</p>
-      <p>I love turning ideas into reality through code. My speciality is building <strong>professional websites for local businesses</strong> — restaurants, salons, and shops — at affordable, student-friendly rates.</p>
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about" class="sec">
+  <div class="rv">
+    <div class="sl">About Me</div>
+    <h2 class="sh">Who I Am.</h2>
+  </div>
+  <div class="about-wrap">
+    <div class="about-text rv d1">
+      <p>Hi! I'm <b>Fatima tu Zahra</b>, a passionate Computer Science student pursuing <b>Cyber Security</b> at FAST-NUCES, Rawalpindi — one of Pakistan's top tech universities. Currently in my <b>2nd semester</b> and already building real, working projects.</p>
+      <p>I love turning ideas into reality through code. My speciality is building <b>professional websites for local businesses</b> — restaurants, salons, and shops — at affordable, student-friendly rates.</p>
       <p>Every day I work on a new project and increase my difficulty level. My commitment is consistent growth and delivering quality work that genuinely helps businesses.</p>
-      <div class="ahl">
-        <p>🎯 <strong style="color:var(--gold)">Looking for:</strong> Part-time &amp; freelance website projects for restaurants, salons, and local businesses in Rawalpindi / Islamabad area and online.</p>
+      <div class="looking-box">
+        <p><b>Looking for:</b> Part-time &amp; freelance website projects for restaurants, salons, and local businesses in Rawalpindi / Islamabad and online.</p>
+      </div>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+        <a href="https://wa.me/923295787944" target="_blank"><button class="btn-wa" style="font-size:13px;padding:.55rem 1.4rem">WhatsApp</button></a>
+        <a href="mailto:fatimazahra.161206@gmail.com"><button class="btn-o" style="font-size:13px;padding:.53rem 1.4rem">Email Me</button></a>
       </div>
     </div>
-    <div class="acard">
-      <div class="acard-c">
-        <h3>Quick Info</h3>
-        <ul class="qi">
-          <li><span>🎓</span><span>FAST-NUCES — Cyber Security, 2nd Sem</span></li>
-          <li><span>📍</span><span>Rawalpindi, Pakistan</span></li>
-          <li><span>📧</span><a href="/cdn-cgi/l/email-protection#ff999e8b96929e859e978d9ed1cec9cecdcfc9bf98929e9693d19c9092"><span class="__cf_email__" data-cfemail="deb8bfaab7b3bfa4bfb6acbff0efe8efeceee89eb9b3bfb7b2f0bdb1b3">[email&#160;protected]</span></a></li>
-          <li><span>📱</span><a href="https://wa.me/923295787944" target="_blank">+92 329 578 7944 (WhatsApp)</a></li>
-          <li><span>💻</span><a href="https://github.com/fatimazahra161206/portfolio" target="_blank">GitHub — fatimazahra161206</a></li>
-          <li><span>💼</span><span>Available for Part-Time &amp; Freelance</span></li>
-        </ul>
-        <div style="display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap;">
-          <a href="https://wa.me/923295787944" target="_blank" class="btn-wa" style="font-size:.78rem;padding:.7rem 1.4rem;">WhatsApp</a>
-          <a href="/cdn-cgi/l/email-protection#2b4d4a5f42464a514a43594a051a1d1a191b1d6b4c464a424705484446" class="btn-g" style="font-size:.78rem;padding:.7rem 1.4rem;">Email Me</a>
+    <div class="quick-info rv d2">
+      <div class="qi-head">
+        <div class="qi-av">FZ</div>
+        <div>
+          <div class="qi-name">Fatima tu Zahra</div>
+          <div class="qi-tag">Available for Hire</div>
         </div>
       </div>
+      <div class="qi-row"><span class="qi-k">University</span><span class="qi-v">FAST-NUCES Rawalpindi</span></div>
+      <div class="qi-row"><span class="qi-k">Degree</span><span class="qi-v">BS CS · Cyber Security</span></div>
+      <div class="qi-row"><span class="qi-k">Semester</span><span class="qi-v accent">2nd Semester</span></div>
+      <div class="qi-row"><span class="qi-k">Location</span><span class="qi-v">Rawalpindi, Pakistan</span></div>
+      <div class="qi-row"><span class="qi-k">Email</span><span class="qi-v"><a href="mailto:fatimazahra.161206@gmail.com">fatimazahra.161206@gmail.com</a></span></div>
+      <div class="qi-row"><span class="qi-k">WhatsApp</span><span class="qi-v"><a href="https://wa.me/923295787944">+92 329 578 7944</a></span></div>
+      <div class="qi-row"><span class="qi-k">GitHub</span><span class="qi-v"><a href="https://github.com/fatimazahra161206/portfolio" target="_blank">fatimazahra161206</a></span></div>
+      <div class="qi-row"><span class="qi-k">Status</span><span class="qi-v accent">Open to Part-Time Work</span></div>
     </div>
   </div>
 </section>
 
-<section id="skills" class="psec">
-  <div class="slbl">What I Know</div>
-  <div class="stitle">Skills &amp; Technologies</div>
-  <div class="divl"></div>
-  <div class="sgrid">
-    <div class="scat"><div class="sic">🌐</div><h3>Web Dev</h3><ul class="sl"><li>HTML5 &amp; CSS3 <span class="sbg">Growing</span></li><li>JavaScript</li><li>Responsive Design</li><li>Business Websites</li></ul></div>
-    <div class="scat"><div class="sic">🎮</div><h3>Game Dev</h3><ul class="sl"><li>Python &amp; Pygame</li><li>C++ Game Logic</li><li>Sprite &amp; Collision</li><li>2D Games</li></ul></div>
-    <div class="scat"><div class="sic">🔐</div><h3>Cyber Security</h3><ul class="sl"><li>Security Basics <span class="sbg">Studying</span></li><li>Network Fundamentals</li><li>Secure Coding</li><li>FAST Curriculum</li></ul></div>
-    <div class="scat"><div class="sic">💻</div><h3>Programming</h3><ul class="sl"><li>Python</li><li>C++</li><li>OOP Concepts</li><li>Problem Solving</li></ul></div>
-    <div class="scat"><div class="sic">🛠️</div><h3>Tools</h3><ul class="sl"><li>Git &amp; GitHub</li><li>VS Code</li><li>Vercel Hosting</li><li>Formspree Email</li></ul></div>
-    <div class="scat"><div class="sic">🎨</div><h3>UI Design</h3><ul class="sl"><li>Layout &amp; Typography</li><li>Color Theory</li><li>Mobile-First</li><li>Business Design</li></ul></div>
+<!-- ══════════ SKILLS ══════════ -->
+<section id="skills" class="sec">
+  <div class="rv">
+    <div class="sl">Technical Skills</div>
+    <h2 class="sh">What I Know.</h2>
   </div>
-</section>
-
-<section id="projects" class="psec">
-  <div class="slbl">What I've Built</div>
-  <div class="stitle">My Projects</div>
-  <div class="divl"></div>
-  <div class="pgrid">
-
-    <!-- SALON SITE -->
-    <div class="pcard feat">
-      <div class="phead">
-        <div class="pic">💄</div>
-        <div><div class="ptyp">Web Dev · Salon Demo</div></div>
-        <div class="lbadge">Live ↗</div>
-      </div>
-      <div class="pbody">
-        <h3>Noor Salon — Beauty &amp; Spa Website</h3>
-        <p>A complete luxury salon website. Includes: hero, full services &amp; pricing, booking form (connected to Gmail), customer reviews, WhatsApp &amp; email contact buttons, gallery section, and professional footer. Fully mobile-responsive. This is an example of what I can build for any salon.</p>
-        <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Formspree</span><span class="ptag">WhatsApp</span><span class="ptag">Responsive</span></div>
-        <div class="plnks">
-          <!-- After Vercel deploy, replace "salon.html" with live URL e.g. https://noor-salon.vercel.app -->
-          <a href="salon.html" target="_blank" class="plink">View Salon Website →</a>
-          <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">GitHub ↗</a>
-        </div>
+  <div class="skills-cats">
+    <div class="sk-cat c1 rv d1">
+      <div class="sk-ico">🌐</div>
+      <div class="sk-name">Web Development</div>
+      <div class="sk-items">
+        <div class="sk-item"><b>HTML5 &amp; CSS3</b><span>Growing</span></div>
+        <div class="sk-item"><b>JavaScript</b></div>
+        <div class="sk-item"><b>Responsive Design</b></div>
+        <div class="sk-item"><b>Business Websites</b></div>
       </div>
     </div>
-
-    <!-- RESTAURANT SITE -->
-    <div class="pcard feat">
-      <div class="phead">
-        <div class="pic">🍽️</div>
-        <div><div class="ptyp">Web Dev · Restaurant Demo</div></div>
-        <div class="lbadge">Live ↗</div>
-      </div>
-      <div class="pbody">
-        <h3>Zaiqa Restaurant — Fine Dining Website</h3>
-        <p>A full restaurant website with 5-tab menu (Starters, Mains, BBQ, Desserts, Drinks), Chef's Specials, table reservation form (connected to Gmail), reviews, WhatsApp &amp; email contact, and footer. Unique warm amber aesthetic. Fully mobile-responsive. Example for any restaurant client.</p>
-        <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Formspree</span><span class="ptag">WhatsApp</span><span class="ptag">Responsive</span></div>
-        <div class="plnks">
-          <!-- After Vercel deploy, replace "restaurant.html" with live URL e.g. https://zaiqa-restaurant.vercel.app -->
-          <a href="restaurant.html" target="_blank" class="plink">View Restaurant Website →</a>
-          <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">GitHub ↗</a>
-        </div>
+    <div class="sk-cat c2 rv d2">
+      <div class="sk-ico">🎮</div>
+      <div class="sk-name">Game Development</div>
+      <div class="sk-items">
+        <div class="sk-item"><b>Python &amp; Pygame</b></div>
+        <div class="sk-item"><b>C++ Game Logic</b></div>
+        <div class="sk-item"><b>Sprite &amp; Collision</b></div>
+        <div class="sk-item"><b>2D Games</b></div>
       </div>
     </div>
-
-    <div class="pcard">
-      <div class="phead"><div class="pic">✊</div><div class="ptyp">Game Development</div></div>
-      <div class="pbody">
-        <h3>Rock Paper Scissors</h3>
-        <p>Interactive Python game with score tracking, win/loss detection, and a clean replay loop.</p>
-        <div class="ptags"><span class="ptag">Python</span><span class="ptag">Game Logic</span><span class="ptag">CLI</span></div>
-        <div class="plnks"><a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">View on GitHub ↗</a></div>
+    <div class="sk-cat c3 rv d3">
+      <div class="sk-ico">🔐</div>
+      <div class="sk-name">Cyber Security</div>
+      <div class="sk-items">
+        <div class="sk-item"><b>Security Basics</b><span>Studying</span></div>
+        <div class="sk-item"><b>Network Fundamentals</b></div>
+        <div class="sk-item"><b>Secure Coding</b></div>
+        <div class="sk-item"><b>FAST Curriculum</b></div>
       </div>
     </div>
-
-    <div class="pcard">
-      <div class="phead"><div class="pic">🎮</div><div class="ptyp">Game Development</div></div>
-      <div class="pbody">
-        <h3>Tumblepop Game</h3>
-        <p>Tumblepop-inspired game: sprite movement, collision detection, enemies, multiple game states.</p>
-        <div class="ptags"><span class="ptag">Python</span><span class="ptag">Pygame</span><span class="ptag">OOP</span><span class="ptag">Sprites</span></div>
-        <div class="plnks"><a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">View on GitHub ↗</a></div>
+    <div class="sk-cat c4 rv d1">
+      <div class="sk-ico">💻</div>
+      <div class="sk-name">Programming</div>
+      <div class="sk-items">
+        <div class="sk-item"><b>Python</b></div>
+        <div class="sk-item"><b>C++</b></div>
+        <div class="sk-item"><b>OOP Concepts</b></div>
+        <div class="sk-item"><b>Problem Solving</b></div>
       </div>
     </div>
-
-    <div class="pcard">
-      <div class="phead"><div class="pic">🚀</div><div class="ptyp">In Progress</div></div>
-      <div class="pbody">
-        <h3>More Every Day...</h3>
-        <p>Building new projects daily, always increasing difficulty. New websites, apps, and games always in progress.</p>
-        <div class="ptags"><span class="ptag">Daily Growth</span><span class="ptag">More Coming</span></div>
-        <div class="plnks"><a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20to%20collaborate." target="_blank" class="plink">Collaborate →</a></div>
+    <div class="sk-cat c5 rv d2">
+      <div class="sk-ico">🛠️</div>
+      <div class="sk-name">Tools &amp; Platforms</div>
+      <div class="sk-items">
+        <div class="sk-item"><b>Git &amp; GitHub</b></div>
+        <div class="sk-item"><b>VS Code</b></div>
+        <div class="sk-item"><b>Vercel Hosting</b></div>
+        <div class="sk-item"><b>Formspree Email</b></div>
+      </div>
+    </div>
+    <div class="sk-cat c6 rv d3">
+      <div class="sk-ico">🎨</div>
+      <div class="sk-name">UI Design</div>
+      <div class="sk-items">
+        <div class="sk-item"><b>Layout &amp; Typography</b></div>
+        <div class="sk-item"><b>Color Theory</b></div>
+        <div class="sk-item"><b>Mobile-First</b></div>
+        <div class="sk-item"><b>Business Design</b></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="offer" class="psec">
-  <div class="slbl">For Businesses</div>
-  <div class="stitle">What I Can Build For You</div>
-  <div class="divl"></div>
-  <div class="ogrid">
-    <div class="ocard"><div class="oic">🍽️</div><h3>Restaurant Website</h3><p>Full menu, reservation form, WhatsApp contact, reviews, mobile design. Customers find &amp; book you online.</p><div class="oprice">Affordable Rates</div></div>
-    <div class="ocard"><div class="oic">💄</div><h3>Salon Website</h3><p>Booking system, services &amp; pricing, gallery, contact via WhatsApp or email. Professional and elegant.</p><div class="oprice">Affordable Rates</div></div>
-    <div class="ocard"><div class="oic">🏪</div><h3>Shop / Business</h3><p>Product showcase, contact form, location, social links. For any local business wanting an online presence.</p><div class="oprice">Affordable Rates</div></div>
-    <div class="ocard"><div class="oic">📱</div><h3>Landing Page</h3><p>One-page site to showcase services and get customers to call or WhatsApp you directly. Fast &amp; effective.</p><div class="oprice">Affordable Rates</div></div>
+<!-- ══════════ PROJECTS ══════════ -->
+<section id="projects" class="sec">
+  <div class="rv">
+    <div class="sl">Projects</div>
+    <h2 class="sh">What I've Built.</h2>
   </div>
-  <div style="text-align:center;margin-top:3rem;">
-    <p style="color:rgba(245,240,232,.5);margin-bottom:1.5rem;font-size:.92rem;font-weight:300;">Interested? I respond fast — usually within a few hours!</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20need%20a%20website%20for%20my%20business." target="_blank" class="btn-wa">WhatsApp Me Now</a>
-      <a href="/cdn-cgi/l/email-protection#0b6d6a7f62666a716a63796a253a3d3a393b3d4b6c666a62672568646634787e69616e687f365c6e6978627f6e2e393b5b7964616e687f2e393b4e657a7e627972" class="btn-g">Email Me</a>
+
+  <!-- Featured -->
+  <div class="proj-feat rv d1">
+    <div>
+      <div class="proj-badge">Premium Project</div>
+      <div class="pf-title">Sultaan Restaurant</div>
+      <p class="pf-desc">A luxury fine dining website featuring a fullscreen autoplay video background hero that auto-cycles 4 videos, animated menu tabs, scroll reveal animations, food gallery with hover effects, Chef's Specials, and a table reservation form. Built with a warm gold &amp; dark brown luxury aesthetic — inspired by top Pakistani fine dining.</p>
+      <div class="ptags">
+        <span class="pt">HTML5</span><span class="pt">CSS3</span><span class="pt">JavaScript</span><span class="pt">Video BG</span><span class="pt">Scroll Animations</span><span class="pt">Responsive</span>
+      </div>
+      <div class="plinks">
+        <a href="https://fatimaportfolio-delta.vercel.app/sultaan.html" target="_blank" class="pl live">View Live ↗</a>
+        <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="pl gh">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="proj-side">
+      <div class="pmet"><div class="pm-n">⭐</div><div class="pm-l">Upgraded</div></div>
+      <div class="pmet"><div class="pm-n">5</div><div class="pm-l">Sections</div></div>
+      <div class="pmet"><div class="pm-n">4</div><div class="pm-l">Videos</div></div>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="proj-grid">
+    <div class="pc rv d1">
+      <div class="pc-emoji">💄</div>
+      <div class="pc-type">Web Dev · Salon Demo</div>
+      <div class="pc-name">Noor Salon</div>
+      <p class="pc-desc">Complete luxury salon website with services &amp; pricing, booking form connected to Gmail, customer reviews, WhatsApp &amp; email contact, gallery, and professional footer.</p>
+      <div class="pc-tags"><span class="pc-tag">HTML5</span><span class="pc-tag">CSS3</span><span class="pc-tag">JavaScript</span><span class="pc-tag">Formspree</span><span class="pc-tag">Responsive</span></div>
+      <a href="https://fatimaportfolio-delta.vercel.app/salon.html" target="_blank" class="pc-link live">View Live ↗</a>
+    </div>
+    <div class="pc rv d2">
+      <div class="pc-emoji">🍽️</div>
+      <div class="pc-type">Web Dev · Restaurant Demo</div>
+      <div class="pc-name">Zaiqa Restaurant</div>
+      <p class="pc-desc">Full restaurant website with 5-tab menu (Starters, Mains, BBQ, Desserts, Drinks), Chef's Specials, table reservation, reviews, WhatsApp contact, and warm amber aesthetic.</p>
+      <div class="pc-tags"><span class="pc-tag">HTML5</span><span class="pc-tag">CSS3</span><span class="pc-tag">JavaScript</span><span class="pc-tag">Formspree</span><span class="pc-tag">Responsive</span></div>
+      <a href="https://fatimaportfolio-delta.vercel.app/restaurant.html" target="_blank" class="pc-link live">View Live ↗</a>
+    </div>
+    <div class="pc rv d3">
+      <div class="pc-emoji">✊</div>
+      <div class="pc-type">Game Development</div>
+      <div class="pc-name">Rock Paper Scissors</div>
+      <p class="pc-desc">Interactive Python game with score tracking, win/loss detection, and a clean replay loop.</p>
+      <div class="pc-tags"><span class="pc-tag">Python</span><span class="pc-tag">Game Logic</span><span class="pc-tag">CLI</span></div>
+      <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="pc-link">GitHub ↗</a>
+    </div>
+    <div class="pc rv d1">
+      <div class="pc-emoji">🎮</div>
+      <div class="pc-type">Game Development</div>
+      <div class="pc-name">Tumblepop Game</div>
+      <p class="pc-desc">Tumblepop-inspired game with sprite movement, collision detection, enemies, and multiple game states using Pygame.</p>
+      <div class="pc-tags"><span class="pc-tag">Python</span><span class="pc-tag">Pygame</span><span class="pc-tag">OOP</span><span class="pc-tag">Sprites</span></div>
+      <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="pc-link">GitHub ↗</a>
+    </div>
+    <div class="pc rv d2" style="grid-column:span 2">
+      <div class="pc-emoji">🚀</div>
+      <div class="pc-type">In Progress</div>
+      <div class="pc-name">More Every Day...</div>
+      <p class="pc-desc">Building new projects daily, always increasing difficulty. New websites, apps, and games always in progress. Want to collaborate or commission a project?</p>
+      <div class="pc-tags"><span class="pc-tag">Daily Growth</span><span class="pc-tag">More Coming</span></div>
+      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20to%20collaborate." target="_blank" class="pc-link live">Collaborate ↗</a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="psec">
-  <div class="slbl">Get In Touch</div>
-  <div class="stitle">Contact Me</div>
-  <div class="divl"></div>
-  <div class="cgrid">
-    <div class="cinfo">
-      <p>I'm available for part-time web projects — restaurants, salons, shops, and more. WhatsApp is the fastest way to reach me. I reply within hours and am always happy to discuss your project!</p>
-      <div class="cbtns">
-        <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20found%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="cwa">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.112 1.528 5.836L0 24l6.335-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.373l-.36-.213-3.757.895.955-3.66-.235-.376A9.818 9.818 0 1112 21.818z"/></svg>
-          WhatsApp — +92 329 578 7944
-        </a>
-        <a href="/cdn-cgi/l/email-protection#0e686f7a67636f746f667c6f203f383f3c3e384e69636f6762206d6163" class="cgm">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <span class="__cf_email__" data-cfemail="eb8d8a9f82868a918a83998ac5dadddad9dbddab8c868a8287c5888486">[email&#160;protected]</span>
-        </a>
-        <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="cgh">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          GitHub Profile
-        </a>
+<!-- ══════════ SERVICES ══════════ -->
+<section id="services">
+  <div class="sec">
+    <div class="rv">
+      <div class="sl">For Businesses</div>
+      <h2 class="sh">What I Can Build.</h2>
+      <p class="ss">Professional websites for local businesses at affordable, student-friendly rates. I respond fast — usually within a few hours.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="sv rv d1">
+        <div class="sv-ico">🍽️</div>
+        <div class="sv-name">Restaurant Website</div>
+        <p class="sv-desc">Full menu, reservation form, WhatsApp contact, reviews, mobile design. Customers find &amp; book you online.</p>
+        <span class="sv-tag">Affordable Rates</span>
+      </div>
+      <div class="sv rv d2">
+        <div class="sv-ico">💄</div>
+        <div class="sv-name">Salon Website</div>
+        <p class="sv-desc">Booking system, services &amp; pricing, gallery, contact via WhatsApp or email. Professional and elegant.</p>
+        <span class="sv-tag">Affordable Rates</span>
+      </div>
+      <div class="sv rv d3">
+        <div class="sv-ico">🏪</div>
+        <div class="sv-name">Shop / Business</div>
+        <p class="sv-desc">Product showcase, contact form, location, social links. For any local business wanting an online presence.</p>
+        <span class="sv-tag">Affordable Rates</span>
+      </div>
+      <div class="sv rv">
+        <div class="sv-ico">📱</div>
+        <div class="sv-name">Landing Page</div>
+        <p class="sv-desc">One-page site to showcase services and get customers to call or WhatsApp you directly. Fast &amp; effective.</p>
+        <span class="sv-tag">Affordable Rates</span>
       </div>
     </div>
-    <!--
-      SETUP FORMSPREE (free):
-      1. Go to formspree.io — sign up with fatimazahra.161206@gmail.com
-      2. Create a new form, copy your Form ID
-      3. Replace mpqjeawk below with your real ID
-      4. Messages will arrive in your Gmail!
-    -->
-    <form class="cform" id="cForm" action="https://formspree.io/f/mpqjeawk" method="POST">
-      <input type="hidden" name="_subject" value="New Message — Fatima tu Zahra Portfolio">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="subject" placeholder="What do you need? (e.g. Restaurant website)">
-      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-      <button type="submit" class="btn-g" id="cBtn" style="width:fit-content;">Send Message ✉️</button>
+    <div class="serv-cta rv">
+      <p>Interested? I respond fast — usually within a few hours!</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20need%20a%20website%20for%20my%20business." target="_blank"><button class="btn-wa">WhatsApp Me Now</button></a>
+        <a href="mailto:fatimazahra.161206@gmail.com?subject=Website%20Project%20Enquiry"><button class="btn-o">Email Me</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="rv">
+    <div class="ct-head">
+      <span class="ct-l1">Let's build</span>
+      <span class="ct-l2">together.</span>
+    </div>
+    <p class="ct-sub">Available for part-time web projects — restaurants, salons, shops, and more. WhatsApp is the fastest way to reach me!</p>
+    <div class="ct-cards">
+      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20found%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="ctc">
+        <span class="ctc-ico">💬</span>
+        <span class="ctc-l">WhatsApp</span>
+        <span class="ctc-v">+92 329 578 7944</span>
+      </a>
+      <a href="mailto:fatimazahra.161206@gmail.com" class="ctc">
+        <span class="ctc-ico">✉</span>
+        <span class="ctc-l">Email</span>
+        <span class="ctc-v">fatimazahra.161206@gmail.com</span>
+      </a>
+      <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="ctc">
+        <span class="ctc-ico">⌥</span>
+        <span class="ctc-l">GitHub</span>
+        <span class="ctc-v">fatimazahra161206</span>
+      </a>
+    </div>
+  </div>
+  <div class="contact-form rv d2">
+    <div class="cf-title">Send a Message ✉️</div>
+    <form id="cf" action="https://formspree.io/f/xdkoepal" method="POST">
+      <div class="cf-grid">
+        <div class="cf-field"><label>Your Name</label><input type="text" name="name" placeholder="Ali Khan" required></div>
+        <div class="cf-field"><label>Your Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+      </div>
+      <div class="cf-field"><label>Project Type</label>
+        <select name="project_type">
+          <option value="">Select a service...</option>
+          <option>Restaurant Website</option>
+          <option>Salon Website</option>
+          <option>Shop / Business Website</option>
+          <option>Landing Page</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="cf-field"><label>Message</label><textarea name="message" placeholder="Tell me about your project..." required></textarea></div>
+      <button type="submit" class="cf-submit">Send Message →</button>
+      <div class="cf-success" id="cfOk">✅ Message sent! I'll reply very soon — or WhatsApp me for faster response!</div>
     </form>
-    <div class="csuccess" id="cSuccess">✅ Message sent! I'll reply very soon — or WhatsApp me for faster response!</div>
   </div>
 </section>
 
 <footer>
-  <div class="fb"><span class="fl">Fatima.</span><p>Cyber Security student at FAST-NUCES, Rawalpindi. Building professional websites for businesses at affordable rates. Available for part-time &amp; freelance.</p></div>
-  <div class="fc">
-    <h4>Navigation</h4>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#offer">Services for Business</a>
-    <a href="#contact">Contact</a>
+  <div class="ft-l">© 2026 <span>Fatima tu Zahra</span> · FAST-NUCES Cyber Security · Rawalpindi, Pakistan</div>
+  <div class="ft-links">
+    <a href="https://github.com/fatimazahra161206/portfolio" target="_blank">GitHub</a>
+    <a href="https://wa.me/923295787944" target="_blank">WhatsApp</a>
+    <a href="mailto:fatimazahra.161206@gmail.com">Gmail</a>
+    <a href="#hero">Back to Top ↑</a>
   </div>
-  <div class="fc">
-    <h4>My Work &amp; Links</h4>
-    <!-- Replace these with Vercel live URLs after hosting -->
-    <a href="salon.html" target="_blank">💄 Noor Salon Website</a>
-    <a href="restaurant.html" target="_blank">🍽️ Zaiqa Restaurant Website</a>
-    <a href="https://github.com/fatimazahra161206/portfolio" target="_blank">💻 GitHub Profile</a>
-    <a href="https://wa.me/923295787944" target="_blank">📱 WhatsApp: +92 329 578 7944</a>
-    <a href="/cdn-cgi/l/email-protection#dabcbbaeb3b7bba0bbb2a8bbf4ebecebe8eaec9abdb7bbb3b6f4b9b5b7">📧 Gmail</a>
-  </div>
-  <div class="fbot">© 2026 <span>Fatima tu Zahra</span> · FAST-NUCES Cyber Security · Rawalpindi, Pakistan</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd72
+<script>
+// ── CURSOR ──────────────────────────────────────────────────────────────
+var cx=0,cy=0,rx=0,ry=0;
+var cur=document.getElementById('cur');
+var curR=document.getElementById('curR');
+document.addEventListener('mousemove',function(e){cx=e.clientX;cy=e.clientY;cur.style.left=cx+'px';cur.style.top=cy+'px';});
+(function animR(){rx+=(cx-rx)*.1;ry+=(cy-ry)*.1;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(animR);})();
+document.querySelectorAll('a,button,.sv,.pc,.sk-cat,.ctc').forEach(function(el){
+  el.addEventListener('mouseenter',function(){cur.style.width='36px';cur.style.height='36px';cur.style.background='rgba(129,140,248,.15)';cur.style.border='1px solid var(--p)';curR.style.width='52px';curR.style.height='52px';});
+  el.addEventListener('mouseleave',function(){cur.style.width='10px';cur.style.height='10px';cur.style.background='var(--p)';cur.style.border='none';curR.style.width='32px';curR.style.height='32px';});
+});
+
+// ── HERO CANVAS ─────────────────────────────────────────────────────────
+(function(){
+  var cv=document.getElementById('hcv');
+  var ctx=cv.getContext('2d');
+  function rsz(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
+  rsz();window.addEventListener('resize',rsz);
+  var pts=[];
+  for(var i=0;i<65;i++)pts.push({x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*1.3+.3,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,o:Math.random()*.35+.08});
+  function draw(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    pts.forEach(function(p){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=cv.width;if(p.x>cv.width)p.x=0;
+      if(p.y<0)p.y=cv.height;if(p.y>cv.height)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(129,140,248,'+p.o+')';ctx.fill();
+    });
+    for(var i=0;i<pts.length;i++)for(var j=i+1;j<pts.length;j++){
+      var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){ctx.beginPath();ctx.strokeStyle='rgba(129,140,248,'+(0.08*(1-d/100))+')';ctx.lineWidth=.5;ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke();}
+    }
+    requestAnimationFrame(draw);
+  }draw();
+})();
+
+// ── SCROLL REVEAL ────────────────────────────────────────────────────────
+var obs=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('in');});},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+
+// ── MOBILE NAV ───────────────────────────────────────────────────────────
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open');}
+
+// ── ACTIVE NAV LINKS ─────────────────────────────────────────────────────
+var navAs=document.querySelectorAll('.nm a');
+window.addEventListener('scroll',function(){
+  var ids=['about','skills','projects','services','contact'];
+  ids.forEach(function(id,i){
+    var s=document.getElementById(id);
+    if(s){var r=s.getBoundingClientRect();if(r.top<=120&&r.bottom>=80){navAs.forEach(function(a){a.style.color='var(--mu)';});if(navAs[i])navAs[i].style.color='var(--tx)';}}
+  });
+});
+
+// ── CONTACT FORM ─────────────────────────────────────────────────────────
+document.getElementById('cf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var fd=new FormData(this);
+  fetch(this.action,{method:'POST',body:fd,headers:{Accept:'application/json'}})
+    .then(function(r){if(r.ok){document.getElementById('cfOk').style.display='block';document.getElementById('cf').reset();}})
+    .catch(function(){document.getElementById('cfOk').style.display='block';});
+});
+</script>
+</body>
+</html>
